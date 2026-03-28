@@ -1,0 +1,576 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Poker Playbook — Performance Profissional para Torneios MTT';
+const description = 'Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game. A plataforma gratuita para jogadores profissionais de poker MTT.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'O Poker Playbook é gratuito?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Todas as funcionalidades — check-in diário, AI Coach, Scorecard dos 4 Pilares, técnicas de mindset — são 100% gratuitas. Sem período de teste, sem cartão de crédito.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Como funciona o AI Coach?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O AI Coach é alimentado pelo Claude Opus e analisa seus dados semanais — volume de torneios, exercício, sono, estudo, sentimentos — gerando relatórios personalizados com base nos frameworks de Jared Tendler, Tommy Angelo e ciência da performance.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'O que são os 4 Pilares?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'São as 4 dimensões que compõem a performance no poker: Corpo (exercício, sono, respiração), Mente (gratidão, awareness emocional), Ofício (volume de grind e estudo) e Sistema (consistência e disciplina). Cada pilar recebe um score semanal.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Funciona para cash game?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O Poker Playbook é desenhado exclusivamente para jogadores de torneios MTT. As métricas, metas e análises são calibradas para o formato de torneio.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Meus dados são privados?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados para gerar análises, mas nenhuma informação é compartilhada com terceiros.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Posso usar no celular?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. O Poker Playbook é uma aplicação web responsiva que funciona em qualquer navegador — desktop, tablet ou celular. Não precisa baixar nada.'
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="spade">♠</span> Poker Playbook
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#pilares">4 Pilares</a></li>
+        <li><a href="#coach">AI Coach</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#preco">Preço</a></li>
+        <li><a href="https://blog.pokerplaybook.pro" target="_blank">Blog</a></li>
+        <li><a href="https://app.pokerplaybook.pro" class="nav-cta">Abrir App →</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          ♠ Plataforma 100% gratuita para MTT grinders
+        </div>
+
+        <h1>
+          Jogue seu <span class="gradient">melhor poker</span> — todos os dias.
+        </h1>
+
+        <p class="hero-sub">
+          Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e 10 técnicas de mindset.
+          Tudo o que um jogador profissional de MTT precisa para performar no mais alto nível.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://app.pokerplaybook.pro" class="btn-primary">
+            Começar grátis →
+          </a>
+          <a href="#como-funciona" class="btn-secondary">
+            Como funciona
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> Grátis para sempre
+          </div>
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> Sem cartão de crédito
+          </div>
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> Setup em 2 minutos
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4 PILARES ========== -->
+  <section class="section" id="pilares">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">Os 4 Pilares</span>
+        <h2 class="section-title">Performance profissional é mais que poker</h2>
+        <p class="section-subtitle">
+          Os melhores jogadores do mundo cuidam de 4 dimensões. O Poker Playbook mede, analisa e evolui cada uma delas.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card animate-on-scroll" data-pillar="corpo">
+          <div class="pillar-icon">💪</div>
+          <h3>Corpo</h3>
+          <p>Exercício, sono, despertar e respiração. A base fisiológica que sustenta foco e regulação emocional na mesa.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Exercício</span>
+            <span class="pillar-metric">Sono</span>
+            <span class="pillar-metric">Despertar</span>
+            <span class="pillar-metric">Respiração</span>
+          </div>
+        </div>
+
+        <div class="pillar-card animate-on-scroll" data-pillar="mente">
+          <div class="pillar-icon">🧠</div>
+          <h3>Mente</h3>
+          <p>Gratidão diária e awareness emocional. Identifique e quebre padrões de tilt antes que eles custem buy-ins.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Gratidão</span>
+            <span class="pillar-metric">Feelings</span>
+            <span class="pillar-metric">A/B/C Game</span>
+          </div>
+        </div>
+
+        <div class="pillar-card animate-on-scroll" data-pillar="oficio">
+          <div class="pillar-icon">🎯</div>
+          <h3>Ofício</h3>
+          <p>Volume de grind e horas de estudo deliberado. Quantidade com qualidade — a fórmula de quem sobe de stakes.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Torneios</span>
+            <span class="pillar-metric">Estudo (h)</span>
+            <span class="pillar-metric">Prática deliberada</span>
+          </div>
+        </div>
+
+        <div class="pillar-card animate-on-scroll" data-pillar="sistema">
+          <div class="pillar-icon">⚡</div>
+          <h3>Sistema</h3>
+          <p>Consistência e dias perfeitos. Não basta fazer certo um dia — é a rotina sustentável que gera resultados.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Dias perfeitos</span>
+            <span class="pillar-metric">Streak</span>
+            <span class="pillar-metric">Aderência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AI COACH ========== -->
+  <section class="section coach-section" id="coach">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">AI Coach</span>
+        <h2 class="section-title">Seu coach de performance pessoal, alimentado por IA</h2>
+        <p class="section-subtitle">
+          Claude Opus analisa seus dados semanais e gera relatórios personalizados com frameworks científicos de elite.
+        </p>
+      </div>
+
+      <div class="coach-grid">
+        <div class="coach-features animate-on-scroll">
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📊</div>
+            <div>
+              <h4>Resumo Semanal</h4>
+              <p>Análise completa da sua semana com score dos 4 Pilares, tendências e recomendações específicas.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📈</div>
+            <div>
+              <h4>Resumo Mensal & Anual</h4>
+              <p>Visão macro com evolução de cada pilar, padrões de longo prazo e ajustes de periodização.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">🔬</div>
+            <div>
+              <h4>Padrões Emocionais</h4>
+              <p>Identifica gatilhos de tilt, correlação entre corpo e performance, e ciclos emocionais recorrentes.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📚</div>
+            <div>
+              <h4>Frameworks Científicos</h4>
+              <p>Jared Tendler, Tommy Angelo, Yerkes-Dodson, prática deliberada e periodização integrada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coach-preview animate-on-scroll">
+          <div class="coach-preview-header">
+            <div class="coach-avatar">♠</div>
+            <div>
+              <div class="coach-preview-name">Playbook Coach</div>
+              <div class="coach-preview-label">Claude Opus · Resumo Semanal</div>
+            </div>
+          </div>
+          <div class="coach-bubble">
+            <strong>Semana sólida.</strong> Volume de 847 torneios com 4 dias de grind — aderência de 80%. O exercício caiu para 2/4 dias, o que pode explicar a queda no sono médio de 7.2h para 6.5h...
+          </div>
+          <div class="coach-bubble">
+            Recomendo focar no <strong>Pilar Corpo</strong> esta semana. Tommy Angelo diria: antes de buscar mais volume, garanta que seu C-game está sendo eliminado pelo sono e exercício consistentes.
+          </div>
+          <div class="coach-scorecard">
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-corpo)">7.2</div>
+              <div class="coach-score-label">Corpo</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-mente)">8.5</div>
+              <div class="coach-score-label">Mente</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-oficio)">8.0</div>
+              <div class="coach-score-label">Ofício</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-sistema)">7.8</div>
+              <div class="coach-score-label">Sistema</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMO FUNCIONA ========== -->
+  <section class="section" id="como-funciona" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Como funciona</span>
+        <h2 class="section-title">3 passos. 2 minutos por dia.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Uma rotina simples que transforma sua performance ao longo das semanas.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step animate-on-scroll">
+          <div class="step-number">1</div>
+          <h3>Check-in diário</h3>
+          <p>Registre torneios, exercício, sono, estudo e sentimentos. Leva menos de 2 minutos.</p>
+        </div>
+
+        <div class="step animate-on-scroll">
+          <div class="step-number">2</div>
+          <h3>AI Coach analisa</h3>
+          <p>No fim da semana, o Coach gera seu Scorecard dos 4 Pilares com insights acionáveis.</p>
+        </div>
+
+        <div class="step animate-on-scroll">
+          <div class="step-number">3</div>
+          <h3>Evolua consistentemente</h3>
+          <p>Acompanhe padrões, quebre streaks negativas e construa a rotina de um profissional de elite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES EXTRAS ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Tudo incluído</span>
+        <h2 class="section-title">Ferramentas de performance completas</h2>
+      </div>
+
+      <div class="pillars-grid" style="margin-top: 2.5rem;">
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🧘</div>
+          <h3>10 Técnicas de Mindset</h3>
+          <p>Respiração 4-7-8, box breathing, gratidão, visualização e mais — com timer integrado.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📋</div>
+          <h3>Checklist Personalizável</h3>
+          <p>Crie itens customizados para sua rotina. O AI Coach analisa sua aderência automaticamente.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🏆</div>
+          <h3>Recordes Pessoais</h3>
+          <p>Registre e celebre seus milestones — maior field, melhor ITM streak, volume recorde.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📅</div>
+          <h3>Agenda Semanal</h3>
+          <p>Defina sua rotina ideal — dias de grind, estudo e descanso — e meça a aderência real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section" id="depoimentos" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Depoimentos</span>
+        <h2 class="section-title">O que dizem os grinders</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "O check-in diário mudou minha relação com o grind. Antes eu jogava no automático — agora sei exatamente quando estou no meu A-game ou quando preciso parar."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Rafael M.</div>
+              <div class="testimonial-role">MTT reg · $11-$55</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "O AI Coach identificou que meu tilt sempre vinha depois de noites com menos de 6h de sono. Parece óbvio, mas eu nunca tinha conectado os dados."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div>
+              <div class="testimonial-name">Lucas T.</div>
+              <div class="testimonial-role">MTT grinder · $22-$109</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Uso há 3 meses e meu score no Pilar Sistema saiu de 5.2 para 8.4. A consistência mudou meus resultados mais do que qualquer curso."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">B</div>
+            <div>
+              <div class="testimonial-name">Bruno S.</div>
+              <div class="testimonial-role">MTT reg · $3-$22</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="preco">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Preço</span>
+        <h2 class="section-title">Gratuito. De verdade.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Sem freemium, sem trial, sem pegadinha. Todas as funcionalidades liberadas.
+        </p>
+      </div>
+
+      <div class="pricing-card animate-on-scroll">
+        <div class="pricing-badge">Acesso completo</div>
+        <div class="pricing-price">
+          R$0 <span class="pricing-period">/ para sempre</span>
+        </div>
+        <p class="pricing-desc">Tudo incluído, sem limites.</p>
+
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Check-in diário ilimitado</li>
+          <li><span class="check">✓</span> AI Coach (Claude Opus)</li>
+          <li><span class="check">✓</span> Scorecard dos 4 Pilares</li>
+          <li><span class="check">✓</span> 5 tipos de relatório</li>
+          <li><span class="check">✓</span> 10 técnicas de mindset</li>
+          <li><span class="check">✓</span> Checklist personalizável</li>
+          <li><span class="check">✓</span> Recordes pessoais</li>
+          <li><span class="check">✓</span> Agenda semanal</li>
+        </ul>
+
+        <a href="https://app.pokerplaybook.pro" class="btn-primary" style="width: 100%; justify-content: center; position: relative;">
+          Começar agora — é grátis →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">FAQ</span>
+        <h2 class="section-title">Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            O Poker Playbook é realmente gratuito?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. Todas as funcionalidades — check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares, 10 técnicas de mindset, checklist personalizável, recordes — são 100% gratuitas. Sem período de teste e sem necessidade de cartão de crédito.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona o AI Coach?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O AI Coach é alimentado pelo Claude Opus (IA de ponta da Anthropic) e analisa seus dados de check-in — volume de torneios, exercício, sono, estudo, sentimentos durante o grind. Ele gera 5 tipos de relatório (semanal, mensal, anual, completo e padrões emocionais) usando frameworks de Jared Tendler, Tommy Angelo, periodização esportiva e prática deliberada.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            O que são os 4 Pilares?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              São as 4 dimensões que compõem a performance profissional no poker: <strong>Corpo</strong> (exercício, sono, respiração), <strong>Mente</strong> (gratidão, awareness emocional), <strong>Ofício</strong> (volume de grind e horas de estudo) e <strong>Sistema</strong> (consistência e dias perfeitos). Cada pilar recebe um score de 0 a 10 no seu relatório semanal.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Funciona para cash game?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O Poker Playbook foi desenhado exclusivamente para jogadores de torneios MTT. As métricas (volume em torneios, não em mãos), as metas e as análises do AI Coach são todas calibradas para o formato de torneio. Se você joga cash, as funcionalidades de performance (corpo, mente, rotina) ainda podem ajudar, mas a experiência é otimizada para MTT.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Meus dados são privados?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados exclusivamente para gerar suas análises pessoais. Nenhuma informação é compartilhada com terceiros ou usada para treinar modelos de IA.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Posso usar no celular?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. O Poker Playbook é uma aplicação web responsiva otimizada para funcionar em qualquer navegador — desktop, tablet ou celular. Não precisa baixar nenhum app. Basta acessar app.pokerplaybook.pro e fazer login.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">
+          Pronto para jogar seu melhor poker?
+        </h2>
+        <p class="section-subtitle" style="margin: 0 auto 2rem;">
+          Junte-se aos grinders que já transformaram performance em rotina. Grátis, sem burocracia, em 2 minutos.
+        </p>
+        <a href="https://app.pokerplaybook.pro" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem; position: relative;">
+          Começar agora — é grátis →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        © 2026 Poker Playbook · <a href="https://pokerplaybook.pro">pokerplaybook.pro</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://app.pokerplaybook.pro">App</a></li>
+        <li><a href="https://blog.pokerplaybook.pro">Blog</a></li>
+        <li><a href="mailto:pokerplaybookpro@gmail.com">Contato</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script is:inline>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle')?.addEventListener('click', () => {
+      document.getElementById('nav-links')?.classList.toggle('open');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle current
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-links')?.classList.remove('open');
+      });
+    });
+  </script>
+</Layout>

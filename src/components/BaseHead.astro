@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/og-image.png',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props;
+
+const siteName = 'Poker Playbook';
+const locale = 'pt_BR';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Poker Playbook',
+  description: 'Plataforma de performance para jogadores profissionais de poker MTT. Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game.',
+  url: 'https://pokerplaybook.pro',
+  applicationCategory: 'SportsApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'BRL',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Vitor Marguti',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    ratingCount: '47',
+    bestRating: '5',
+  },
+};
+
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Poker Playbook',
+  url: 'https://pokerplaybook.pro',
+  logo: 'https://pokerplaybook.pro/logo.png',
+  sameAs: [],
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary SEO -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content="index, follow" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Language -->
+<html lang="pt-BR" />
+<meta property="og:locale" content={locale} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={new URL(image, Astro.site).href} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site).href} />
+
+<!-- JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-780RN11CRM"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-780RN11CRM');
+</script>
