@@ -1,0 +1,35 @@
+---
+import PillarPage from '../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Ofício',
+  color: '#378ADD',
+  icon: '🎯',
+  title: 'Pilar Ofício: Volume de Grind e Estudo Deliberado',
+  description: 'Torneios jogados e horas de estudo com qualidade. Quantidade com qualidade — a fórmula de quem sobe de stakes. O Pilar com maior peso no score geral.',
+  metaTitle: 'Pilar Ofício — Volume e Estudo Deliberado para MTT | Poker Playbook',
+  metaDescription: 'Meça seu volume de torneios MTT e horas de estudo deliberado. O Pilar Ofício do Poker Playbook tem o maior peso (35%) no Scorecard dos 4 Pilares.',
+  weight: '35%',
+  components: [
+    { name: 'Grind Completo', weight: '50%', description: 'Atingir sua meta diária de torneios. Não é sobre jogar o máximo possível — é sobre cumprir o que planejou na agenda semanal, com consistência.' },
+    { name: 'Estudo Completo', weight: '50%', description: 'Horas de estudo deliberado — review de mãos, ICM, ranges, análise de leaks. O Playbook mede em horas, não em número de sessões.' },
+  ],
+  frameworks: [
+    { name: 'Prática Deliberada — Ericsson 1993', concept: 'Volume sem intenção não gera melhoria. Prática deliberada exige foco em pontos fracos específicos, feedback imediato e desconforto cognitivo.', application: 'O AI Coach diferencia estudo deliberado de estudo passivo. Registrar o tópico estudado permite análise de quais áreas recebem mais ou menos atenção.' },
+    { name: 'Periodização — Macrociclo de Volume', concept: 'Atletas de elite não treinam no mesmo volume o ano todo. Há fases de construção (volume alto), competição (volume médio, foco em performance) e recuperação.', application: 'A análise anual (YTD) mostra ciclos naturais de volume e o Coach sugere quando está em overgrind ou undergrind baseado no seu padrão histórico.' },
+    { name: 'Macnamara 2016 — Qualidade > Quantidade', concept: 'Meta-análise mostrou que prática deliberada explica ~26% da variância em performance em jogos. O restante vem de fatores como qualidade do estudo e feedback.', application: 'O Playbook não premia volume bruto. O score pondera estudo completo igualmente ao grind — reconhecendo que estudar 2h vale tanto quanto jogar 200 torneios.' },
+  ],
+  exercises: [
+    { title: 'Review de Mãos Top 3', description: 'Depois de cada sessão, selecione as 3 mãos mais difíceis e analise com solver ou grupo de estudo. Anote o que aprendeu no campo de estudo do Playbook.', duration: '30-45 min' },
+    { title: 'Estudo de ICM Pré-Sessão', description: 'Antes de grinder, faça 15 minutos de ICM spots em software de treino. Aqueça o cérebro para as decisões que realmente separam dinheiro no MTT.', duration: '15 min' },
+    { title: 'Volume Tracking Semanal', description: 'No domingo, compare torneios jogados vs. meta semanal. Identifique os dias que ficou abaixo e por quê — o AI Coach usa essa informação na análise.', duration: '5 min' },
+  ],
+  faq: [
+    { question: 'Qual a meta ideal de torneios por dia?', answer: 'Depende do formato (turbo, regular, progressive KO) e do seu nível de fadiga. O Playbook não define uma meta universal — você configura a sua na agenda semanal, e o AI Coach avalia se está sustentável baseado nos outros pilares.' },
+    { question: 'Estudo de poker conta como prática deliberada?', answer: 'Depende. Assistir vlogs no YouTube não é prática deliberada. Review de mãos com solver focando em leaks específicos, sim. O segredo é ter um objetivo claro, desconforto cognitivo e feedback. O Playbook mede horas — a qualidade aparece na análise do Coach.' },
+    { question: 'Por que o Pilar Ofício tem o maior peso?', answer: 'Porque no poker profissional, volume de jogo e estudo são os inputs mais diretamente ligados a resultados. Corpo e Mente são fundamentos — mas sem sentar na mesa e estudar, não há resultado. 35% reflete que é o pilar de ação direta.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

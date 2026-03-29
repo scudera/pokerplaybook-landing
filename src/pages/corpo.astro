@@ -1,0 +1,37 @@
+---
+import PillarPage from '../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Corpo',
+  color: '#1D9E75',
+  icon: '💪',
+  title: 'Pilar Corpo: A Base Fisiológica da Performance no Poker',
+  description: 'Exercício, sono, despertar e respiração. Sem uma base física sólida, nenhuma estratégia de mesa se sustenta. O corpo é o hardware que roda o software mental.',
+  metaTitle: 'Pilar Corpo — Exercício, Sono e Respiração para Poker | Poker Playbook',
+  metaDescription: 'Como exercício, sono de qualidade e técnicas de respiração impactam sua performance em torneios MTT. O Pilar Corpo do Poker Playbook mede e evolui sua base fisiológica.',
+  weight: '25%',
+  components: [
+    { name: 'Exercício', weight: '35%', description: 'Atividade física regular regula cortisol, melhora foco e aumenta resiliência emocional. O AI Coach monitora sua frequência e correlaciona com performance na mesa.' },
+    { name: 'Sono', weight: '25%', description: 'Horas de sono impactam diretamente tomada de decisão, controle emocional e detecção de ranges. O Playbook registra duração e qualidade toda noite.' },
+    { name: 'Despertar', weight: '20%', description: 'Como você começa o dia define o tom da sessão. Despertar cedo e com rotina matinal consistente é um dos maiores preditores de dias perfeitos.' },
+    { name: 'Respiração', weight: '20%', description: 'Técnicas como box breathing e 4-7-8 regulam o sistema nervoso autônomo em tempo real. Essencial antes de sessões e em momentos de pressão.' },
+  ],
+  frameworks: [
+    { name: 'Yerkes-Dodson — Arousal Ótimo', concept: 'Existe um nível ideal de ativação fisiológica para performance cognitiva. Pouco arousal = apatia. Muito = ansiedade. O pico está no meio.', application: 'O AI Coach analisa correlação entre exercício, sono e sentimentos durante o grind para identificar seu ponto ótimo de arousal.' },
+    { name: 'Tommy Angelo — Reciprocalidade Física', concept: 'Cada minuto investido em saúde física retorna multiplicado na mesa. O C-game é mais frequente quando o corpo está negligenciado.', application: 'O Scorecard mostra quando quedas no Pilar Corpo precedem quedas no Pilar Ofício — padrão clássico de C-game por negligência física.' },
+    { name: 'Periodização — Mujika et al. 2018', concept: 'Atletas de elite alternam ciclos de carga e recuperação. Overtraining destrói performance tanto quanto sedentarismo.', application: 'A agenda semanal permite planejar dias de grind pesado vs. leve, com métricas de aderência automática.' },
+  ],
+  exercises: [
+    { title: 'Box Breathing Pré-Sessão', description: '4 segundos inspira, 4 segura, 4 expira, 4 segura. Repita 5 ciclos. Calibra o sistema nervoso antes de abrir as mesas.', duration: '3 min' },
+    { title: 'Exercício Aeróbico Matinal', description: 'Caminhada, corrida leve ou bike por 20-30 min. Libera BDNF, melhora memória de trabalho e regula humor pro dia inteiro.', duration: '20-30 min' },
+    { title: 'Protocolo 4-7-8 Anti-Tilt', description: 'Inspira 4s, segura 7s, expira 8s. Use nos breaks ou quando sentir frustração subindo. Ativa o parassimpático em 90 segundos.', duration: '2 min' },
+  ],
+  faq: [
+    { question: 'Preciso ser atleta para ter score alto no Pilar Corpo?', answer: 'Não. O Playbook mede consistência, não intensidade. Uma caminhada de 20 minutos 4x/semana pontua mais do que uma maratona esporádica. O que importa é a regularidade.' },
+    { question: 'Como o sono é medido?', answer: 'Você registra horas de sono no check-in diário. O AI Coach analisa a média semanal e correlaciona com seus sentimentos e volume de grind. A ciência mostra que abaixo de 7h, decisões complexas deterioram significativamente.' },
+    { question: 'As técnicas de respiração realmente funcionam no poker?', answer: 'Sim. Box breathing e 4-7-8 são usadas por militares e atletas olímpicos para regulação de arousal em situações de alta pressão. No poker, são especialmente úteis em bolhas, final tables e após bad beats.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

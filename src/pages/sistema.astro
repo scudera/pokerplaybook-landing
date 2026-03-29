@@ -1,0 +1,34 @@
+---
+import PillarPage from '../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Sistema',
+  color: '#EF9F27',
+  icon: '⚡',
+  title: 'Pilar Sistema: Consistência e Dias Perfeitos',
+  description: 'Não basta acertar um dia — é a rotina sustentável que gera resultados. O Pilar Sistema mede quantos dias você cumpriu 100% do que planejou.',
+  metaTitle: 'Pilar Sistema — Consistência e Rotina para Poker | Poker Playbook',
+  metaDescription: 'Dias perfeitos, streaks e aderência à rotina. O Pilar Sistema do Poker Playbook mede sua consistência e disciplina como jogador profissional de MTT.',
+  weight: '20%',
+  components: [
+    { name: 'Dias Perfeitos', weight: '100%', description: 'Um dia perfeito é quando você cumpriu tudo: exercício, grind, estudo, sono adequado, check-in completo. É o indicador máximo de consistência — e o único componente deste pilar.' },
+  ],
+  frameworks: [
+    { name: 'Tommy Angelo — Bliscipline', concept: 'Disciplina no poker não é rigidez — é a habilidade de fazer a coisa certa mesmo quando não está com vontade. Angelo cunhou "bliscipline" para descrever a disciplina alegre, sustentável.', application: 'O Pilar Sistema não pune dias ruins — ele celebra dias perfeitos. A métrica é positiva (quantos acertou) ao invés de negativa (quantos errou). Incentiva bliscipline.' },
+    { name: 'Prática Deliberada — Consistência > Intensidade', concept: 'Ericsson mostrou que performers de elite praticam regularmente por períodos moderados, não em maratonas esporádicas. A chave é a regularidade.', application: 'O score do Sistema sobe com dias perfeitos consistentes, não com um dia heroico de 16h de grind. 4 dias perfeitos por semana > 1 dia de 20h.' },
+    { name: 'Fitness-Fatigue Model', concept: 'Performance = Fitness (acúmulo positivo) − Fatigue (acúmulo negativo). Fitness demora para construir e desaparece devagar. Fadiga aparece rápido e some rápido.', application: 'Streaks de dias perfeitos constroem "fitness de rotina". O AI Coach identifica quando a fadiga acumula (queda nos scores) e sugere dias de recuperação estratégica.' },
+  ],
+  exercises: [
+    { title: 'Planejamento Semanal (Domingo)', description: 'Defina na agenda do Playbook quais dias vai grinder, estudar e descansar. Planejar antes de executar elimina decisões no calor do momento.', duration: '10 min' },
+    { title: 'Check-in em Menos de 2 Min', description: 'Abra o Playbook todo dia e registre tudo em menos de 2 minutos. O hábito precisa ser tão leve que não há desculpa para pular.', duration: '2 min' },
+    { title: 'Review do Score Semanal', description: 'Quando o AI Coach gerar seu resumo, leia o Scorecard dos 4 Pilares. Identifique qual pilar caiu e por quê. Uma correção por semana é suficiente.', duration: '5 min' },
+  ],
+  faq: [
+    { question: 'O que conta como um dia perfeito?', answer: 'Dia em que você completou todos os itens da sua rotina: exercício (se planejado), grind (se planejado), estudo (se planejado), sono adequado e check-in registrado. A definição é personalizada pela sua agenda semanal — um dia de descanso planejado conta como perfeito.' },
+    { question: 'E se eu não conseguir ter dias perfeitos consistentes?', answer: 'O AI Coach identifica o que está impedindo e sugere ajustes. Muitas vezes o problema é uma meta irrealista — grind todo dia, por exemplo. Reduzir a meta para algo sustentável aumenta os dias perfeitos, que é o que importa.' },
+    { question: 'Férias contam contra o score?', answer: 'Não. O Playbook tem um sistema de férias — períodos marcados como férias são excluídos de todos os cálculos de aderência. Descanso planejado é parte do sistema.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

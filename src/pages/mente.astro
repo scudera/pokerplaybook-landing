@@ -1,0 +1,35 @@
+---
+import PillarPage from '../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Mente',
+  color: '#7F77DD',
+  icon: '🧠',
+  title: 'Pilar Mente: Awareness Emocional e Controle de Tilt',
+  description: 'Gratidão diária e registro de sentimentos durante o grind. Identifique padrões emocionais antes que eles custem buy-ins. A mente treinada é sua maior edge.',
+  metaTitle: 'Pilar Mente — Mental Game e Controle de Tilt | Poker Playbook',
+  metaDescription: 'Gratidão, awareness emocional e controle de tilt para poker MTT. O Pilar Mente do Poker Playbook identifica padrões emocionais e previne C-game.',
+  weight: '20%',
+  components: [
+    { name: 'Gratidão', weight: '50%', description: 'Registrar gratidão diária recalibra o viés de negatividade natural do grinder. Jogadores que praticam gratidão consistente reportam menos tilt e mais resiliência.' },
+    { name: 'Feelings', weight: '50%', description: 'Registros de sentimentos durante o grind criam um mapa emocional. O AI Coach identifica gatilhos recorrentes, ciclos e correlações com volume e resultados.' },
+  ],
+  frameworks: [
+    { name: 'Jared Tendler — A/B/C Game', concept: 'Cada jogador tem 3 níveis de performance. O objetivo não é jogar o A-game sempre, mas eliminar o C-game. O C-game geralmente surge de gatilhos emocionais não reconhecidos.', application: 'O AI Coach correlaciona seus feelings com padrões de volume e aderência para identificar quando e por que seu C-game aparece.' },
+    { name: 'Jared Tendler — Taxonomia de Tilt', concept: '7 tipos de tilt: injustiça, ódio de perder, erro, vingança, entitlement, desespero e controle de resultados. Cada tipo tem gatilho e solução diferentes.', application: 'O relatório de Padrões Emocionais identifica qual tipo de tilt é mais frequente nos seus feelings e sugere estratégias específicas de Tendler.' },
+    { name: 'Tommy Angelo — Lopping Off C-Game', concept: 'Evolução acontece mais rápido cortando as piores decisões do que tentando fazer as melhores. Foco na eliminação, não na adição.', application: 'O Scorecard mostra períodos de C-game e o Coach sugere quais hábitos eliminar primeiro — geralmente ligados a sono, exercício ou triggers emocionais específicos.' },
+  ],
+  exercises: [
+    { title: 'Gratidão Matinal', description: 'Registre 3 coisas pelas quais é grato antes de abrir as mesas. Pode ser simples: saúde, bankroll, oportunidade de jogar. Reduz viés de negatividade.', duration: '2 min' },
+    { title: 'Check-in Emocional nos Breaks', description: 'A cada break de torneio, pause e identifique: "O que estou sentindo agora?" Nomeie a emoção sem julgamento. Isso ativa o córtex pré-frontal e desativa a amígdala.', duration: '30 seg' },
+    { title: 'Journaling Pós-Sessão', description: 'Depois de fechar as mesas, registre seus feelings no Playbook. O que sentiu? Quando? O que gatilhou? Esse dado alimenta o AI Coach para análise de padrões.', duration: '3 min' },
+  ],
+  faq: [
+    { question: 'Gratidão realmente melhora meu jogo?', answer: 'Sim. Estudos em psicologia positiva mostram que gratidão regular reduz ruminação (pensar repetidamente em bad beats) e melhora regulação emocional. No poker, isso se traduz em menos tilt e tomada de decisão mais clara.' },
+    { question: 'Como o AI Coach identifica padrões de tilt?', answer: 'Ele cruza seus registros de feelings com dados de volume, exercício e sono. Se você consistentemente registra frustração em dias com menos de 6h de sono e sem exercício, ele identifica o padrão e alerta.' },
+    { question: 'O que é A/B/C Game na prática?', answer: 'A-game é você no seu melhor. B-game é aceitável. C-game é quando toma decisões que sabe que são ruins — call de frustração, push de vingança, desistir de ler ranges. O objetivo é reduzir o tempo em C-game, não ser A-game 100%.' },
+  ],
+};
+---
+
+<PillarPage {...data} />
