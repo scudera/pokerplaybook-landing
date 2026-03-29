@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = 'Poker Playbook — Performance Profissional para Torneios MTT';
-const description = 'Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game. A plataforma gratuita para jogadores profissionais de poker MTT.';
+const description = 'Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game. Comece grátis. Planos Pro e Elite para quem quer mais.';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -13,7 +13,7 @@ const faqSchema = {
       name: 'O Poker Playbook é gratuito?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sim. Todas as funcionalidades — check-in diário, AI Coach, Scorecard dos 4 Pilares, técnicas de mindset — são 100% gratuitas. Sem período de teste, sem cartão de crédito.'
+        text: 'O plano Grind é 100% gratuito — sem período de teste, sem cartão de crédito. Inclui check-in diário, score, rotina, mindset e recordes. Para AI Coach, analytics avançado e checklist personalizado, existem os planos Pro (R$29/mês) e Elite (R$58/mês). Todos os planos pagos têm desconto de 25% no plano anual.'
       }
     },
     {
@@ -74,7 +74,7 @@ const faqSchema = {
         <li><a href="#pilares">4 Pilares</a></li>
         <li><a href="#coach">AI Coach</a></li>
         <li><a href="#como-funciona">Como Funciona</a></li>
-        <li><a href="#preco">Preço</a></li>
+        <li><a href="#preco">Planos</a></li>
         <li><a href="https://blog.pokerplaybook.pro" target="_blank">Blog</a></li>
         <li><a href="https://app.pokerplaybook.pro" class="nav-cta">Abrir App →</a></li>
       </ul>
@@ -87,7 +87,7 @@ const faqSchema = {
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
-          ♠ Plataforma 100% gratuita para MTT grinders
+          ♠ Comece grátis — planos a partir de R$29/mês
         </div>
 
         <h1>
@@ -110,7 +110,7 @@ const faqSchema = {
 
         <div class="hero-proof">
           <div class="hero-proof-item">
-            <span class="icon">✓</span> Grátis para sempre
+            <span class="icon">✓</span> Plano Grind grátis
           </div>
           <div class="hero-proof-item">
             <span class="icon">✓</span> Sem cartão de crédito
@@ -329,92 +329,82 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="section" id="depoimentos" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="animate-on-scroll" style="text-align: center;">
-        <span class="section-label" style="justify-content: center;">Depoimentos</span>
-        <h2 class="section-title">O que dizem os grinders</h2>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">
-            "O check-in diário mudou minha relação com o grind. Antes eu jogava no automático — agora sei exatamente quando estou no meu A-game ou quando preciso parar."
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">R</div>
-            <div>
-              <div class="testimonial-name">Rafael M.</div>
-              <div class="testimonial-role">MTT reg · $11-$55</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">
-            "O AI Coach identificou que meu tilt sempre vinha depois de noites com menos de 6h de sono. Parece óbvio, mas eu nunca tinha conectado os dados."
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">L</div>
-            <div>
-              <div class="testimonial-name">Lucas T.</div>
-              <div class="testimonial-role">MTT grinder · $22-$109</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">
-            "Uso há 3 meses e meu score no Pilar Sistema saiu de 5.2 para 8.4. A consistência mudou meus resultados mais do que qualquer curso."
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">B</div>
-            <div>
-              <div class="testimonial-name">Bruno S.</div>
-              <div class="testimonial-role">MTT reg · $3-$22</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== PRICING ========== -->
-  <section class="section" id="preco">
+  <section class="section" id="preco" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
-        <span class="section-label" style="justify-content: center;">Preço</span>
-        <h2 class="section-title">Gratuito. De verdade.</h2>
+        <span class="section-label" style="justify-content: center;">Planos</span>
+        <h2 class="section-title">Comece grátis e evolua conforme sua necessidade</h2>
         <p class="section-subtitle" style="margin: 0 auto;">
-          Sem freemium, sem trial, sem pegadinha. Todas as funcionalidades liberadas.
+          Do check-in básico ao AI Coach ilimitado. Escolha o nível que combina com o seu grind.
         </p>
       </div>
 
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-badge">Acesso completo</div>
-        <div class="pricing-price">
-          R$0 <span class="pricing-period">/ para sempre</span>
+      <div class="pricing-grid">
+        <!-- Grind (Free) -->
+        <div class="pricing-tier animate-on-scroll">
+          <h3 class="tier-name">Grind</h3>
+          <p class="tier-tagline">App completo, sem IA</p>
+          <div class="tier-price">
+            <span class="tier-amount">Grátis</span>
+          </div>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Check-in diário + checklist padrão</li>
+            <li><span class="check">✓</span> Score geral, financeiro, estudos</li>
+            <li><span class="check">✓</span> Rotina, flowchart, mindset, respiração</li>
+            <li><span class="check">✓</span> Roadmap + milestones</li>
+            <li><span class="check">✓</span> Streaks + recordes</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier">
+            Começar grátis
+          </a>
         </div>
-        <p class="pricing-desc">Tudo incluído, sem limites.</p>
 
-        <ul class="pricing-features">
-          <li><span class="check">✓</span> Check-in diário ilimitado</li>
-          <li><span class="check">✓</span> AI Coach (Claude Opus)</li>
-          <li><span class="check">✓</span> Scorecard dos 4 Pilares</li>
-          <li><span class="check">✓</span> 5 tipos de relatório</li>
-          <li><span class="check">✓</span> 10 técnicas de mindset</li>
-          <li><span class="check">✓</span> Checklist personalizável</li>
-          <li><span class="check">✓</span> Recordes pessoais</li>
-          <li><span class="check">✓</span> Agenda semanal</li>
-        </ul>
+        <!-- Pro -->
+        <div class="pricing-tier pricing-tier--featured animate-on-scroll">
+          <div class="tier-badge">Recomendado</div>
+          <h3 class="tier-name">👑 Pro</h3>
+          <p class="tier-tagline">Tudo do Grind + analytics + AI</p>
+          <div class="tier-price">
+            <span class="tier-amount">R$29</span>
+            <span class="tier-period">/mês</span>
+          </div>
+          <p class="tier-annual">R$349/ano (economia de R$119)</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Tudo do Grind +</li>
+            <li><span class="check">✓</span> Dashboard 4 Pilares completo</li>
+            <li><span class="check">✓</span> Analytics detalhado (check-in, mental tech)</li>
+            <li><span class="check">✓</span> Checklist personalizado</li>
+            <li><span class="check">✓</span> Objetivos + férias + export</li>
+            <li><span class="check">✓</span> Maestria + XP + achievements</li>
+            <li><span class="check">✓</span> AI Coach: Semanal, Mensal, Padrões (10/mês)</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier btn-tier--featured">
+            Assinar Pro
+          </a>
+        </div>
 
-        <a href="https://app.pokerplaybook.pro" class="btn-primary" style="width: 100%; justify-content: center; position: relative;">
-          Começar agora — é grátis →
-        </a>
+        <!-- Elite -->
+        <div class="pricing-tier animate-on-scroll">
+          <h3 class="tier-name">💎 Elite</h3>
+          <p class="tier-tagline">Tudo do Pro + AI ilimitado</p>
+          <div class="tier-price">
+            <span class="tier-amount">R$58</span>
+            <span class="tier-period">/mês</span>
+          </div>
+          <p class="tier-annual">R$697/ano (economia de R$251)</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Tudo do Pro +</li>
+            <li><span class="check">✓</span> AI Coach ilimitado (+ YTD, Completo)</li>
+            <li><span class="check">✓</span> Agente Cientista completo</li>
+            <li><span class="check">✓</span> Métricas dinâmicas</li>
+            <li><span class="check">✓</span> Rankings + acesso antecipado</li>
+            <li><span class="dim">◇</span> Em breve: chat com AI, alertas, correlações</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier btn-tier--elite">
+            Assinar Elite
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -430,12 +420,12 @@ const faqSchema = {
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            O Poker Playbook é realmente gratuito?
+            O Poker Playbook é gratuito?
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Sim. Todas as funcionalidades — check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares, 10 técnicas de mindset, checklist personalizável, recordes — são 100% gratuitas. Sem período de teste e sem necessidade de cartão de crédito.
+              O plano Grind é 100% gratuito — sem período de teste, sem cartão de crédito. Inclui check-in diário, score, rotina, mindset e recordes. Para AI Coach, analytics avançado e checklist personalizado, existem os planos Pro (R$29/mês) e Elite (R$58/mês). Todos os planos pagos têm desconto de 25% no plano anual.
             </div>
           </div>
         </div>

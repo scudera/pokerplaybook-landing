@@ -24,20 +24,14 @@ const jsonLd = {
   url: 'https://pokerplaybook.pro',
   applicationCategory: 'SportsApplication',
   operatingSystem: 'Web',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'BRL',
-  },
+  offers: [
+    { '@type': 'Offer', name: 'Grind', price: '0', priceCurrency: 'BRL' },
+    { '@type': 'Offer', name: 'Pro', price: '29', priceCurrency: 'BRL', billingIncrement: 'P1M' },
+    { '@type': 'Offer', name: 'Elite', price: '58', priceCurrency: 'BRL', billingIncrement: 'P1M' },
+  ],
   author: {
     '@type': 'Person',
     name: 'Vitor Marguti',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '47',
-    bestRating: '5',
   },
 };
 
