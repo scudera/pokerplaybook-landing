@@ -1,0 +1,36 @@
+---
+import PillarPage from '../../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Craft',
+  color: '#378ADD',
+  icon: '🎯',
+  title: 'Craft Pillar: Grind Volume & Deliberate Study for Poker',
+  description: 'Tournament volume and hours of deliberate study. Quality with quantity — the formula for moving up in stakes and sustaining long-term results.',
+  metaTitle: 'Craft Pillar — Grind Volume & Study Hours for Poker | Poker Playbook',
+  metaDescription: 'Track tournament volume and deliberate study hours for MTT success. The Craft Pillar measures your actual poker work and ensures quality matches quantity.',
+  weight: '35%',
+  lang: 'en',
+  components: [
+    { name: 'Grind', weight: '50%', description: 'Tournament volume is the engine of results. The Playbook tracks daily count, adherence to your schedule, and whether you are hitting your weekly targets.' },
+    { name: 'Study', weight: '50%', description: 'Study is measured in HOURS, not sessions. The AI Coach tracks topic distribution, session duration and correlates study patterns with performance improvements.' },
+  ],
+  frameworks: [
+    { name: 'Deliberate Practice — Ericsson 1993', concept: 'Volume alone does not create expertise. Practice must be deliberate: focused on specific weaknesses, with immediate feedback, outside the comfort zone.', application: 'The study tracker helps you log what you studied, for how long, and with what focus. The AI Coach identifies if you are doing deliberate practice or just going through the motions.' },
+    { name: 'Periodization — Micro/Meso/Macrocycles', concept: 'Elite athletes structure training in cycles. Constant high volume without recovery leads to burnout. Structured alternation produces sustainable growth.', application: 'Your weekly schedule defines grind and study days. The Coach monitors if your actual behavior matches the plan and flags when you are overtraining or undertraining.' },
+    { name: 'Fitness-Fatigue Model', concept: 'Performance = Fitness minus Fatigue. Every grind session builds both skill (fitness) and tiredness (fatigue). Peak performance requires managing the balance.', application: 'Monthly and YTD reviews show long-term trends. The Coach identifies when volume is producing diminishing returns and recommends recovery periods.' },
+  ],
+  exercises: [
+    { title: 'Weekly Volume Target', description: 'Set a realistic tournament target for the week (e.g., 200 tournaments). Track daily against target. The goal is sustainable consistency, not record-breaking weeks followed by burnout.', duration: 'Ongoing' },
+    { title: 'Focused Study Session', description: 'Pick ONE leak per week. Study it for 45-60 minutes with full focus. Review hands, watch training videos, or use a solver — but only on that specific topic.', duration: '45-60 min' },
+    { title: 'Post-Study Application', description: 'After each study session, play 5-10 tournaments specifically looking for spots to apply what you studied. This bridges the gap between theory and practice.', duration: '2-3 hours' },
+  ],
+  faq: [
+    { question: 'How many tournaments should I play per week?', answer: 'It depends on your schedule and stakes. The Playbook does not prescribe a magic number — it helps you set YOUR target and measures adherence. Consistency at 150/week beats erratic swings between 50 and 400.' },
+    { question: 'Why is study measured in hours instead of sessions?', answer: 'A 15-minute session scrolling through hand histories is very different from a 90-minute deep solver analysis. Hours ensure quality is captured. The AI Coach flags when average session length drops below productive thresholds.' },
+    { question: 'What if I am a recreational player with limited time?', answer: 'The Craft Pillar adapts to your schedule. Set realistic targets for your available hours. Even 3 tournaments and 30 minutes of study per week can score well if done consistently. The system rewards adherence to YOUR plan, not some external standard.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

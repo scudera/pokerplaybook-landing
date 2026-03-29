@@ -1,0 +1,38 @@
+---
+import PillarPage from '../../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Body',
+  color: '#1D9E75',
+  icon: '💪',
+  title: 'Body Pillar: The Physiological Foundation of Poker Performance',
+  description: 'Exercise, sleep, wake-up routine and breathing. Without a solid physical foundation, no table strategy holds up. The body is the hardware that runs the mental software.',
+  metaTitle: 'Body Pillar — Exercise, Sleep & Breathing for Poker | Poker Playbook',
+  metaDescription: 'How exercise, quality sleep and breathing techniques impact your MTT tournament performance. The Poker Playbook Body Pillar measures and evolves your physiological foundation.',
+  weight: '25%',
+  lang: 'en',
+  components: [
+    { name: 'Exercise', weight: '35%', description: 'Regular physical activity regulates cortisol, improves focus and increases emotional resilience. The AI Coach monitors your frequency and correlates it with table performance.' },
+    { name: 'Sleep', weight: '25%', description: 'Sleep hours directly impact decision-making, emotional control and range detection. The Playbook tracks duration and quality every night.' },
+    { name: 'Wake-up', weight: '20%', description: 'How you start your day sets the tone for your session. Waking up early with a consistent morning routine is one of the strongest predictors of perfect days.' },
+    { name: 'Breathing', weight: '20%', description: 'Techniques like box breathing and 4-7-8 regulate the autonomic nervous system in real time. Essential before sessions and in high-pressure moments.' },
+  ],
+  frameworks: [
+    { name: 'Yerkes-Dodson — Optimal Arousal', concept: 'There is an ideal level of physiological activation for cognitive performance. Too little arousal = apathy. Too much = anxiety. Peak performance is in the middle.', application: 'The AI Coach analyzes the correlation between exercise, sleep and feelings during the grind to identify your optimal arousal point.' },
+    { name: 'Tommy Angelo — Physical Reciprocality', concept: 'Every minute invested in physical health returns multiplied at the table. C-game is more frequent when the body is neglected.', application: 'The Scorecard shows when Body Pillar drops precede Craft Pillar drops — a classic pattern of C-game from physical neglect.' },
+    { name: 'Periodization — Mujika et al. 2018', concept: 'Elite athletes alternate load and recovery cycles. Overtraining destroys performance just as much as sedentarism.', application: 'The weekly schedule allows planning heavy vs. light grind days, with automatic adherence metrics.' },
+  ],
+  exercises: [
+    { title: 'Pre-Session Box Breathing', description: '4 seconds inhale, 4 hold, 4 exhale, 4 hold. Repeat 5 cycles. Calibrates the nervous system before opening tables.', duration: '3 min' },
+    { title: 'Morning Aerobic Exercise', description: 'Walking, light jogging or cycling for 20-30 min. Releases BDNF, improves working memory and regulates mood for the entire day.', duration: '20-30 min' },
+    { title: 'Anti-Tilt 4-7-8 Protocol', description: 'Inhale 4s, hold 7s, exhale 8s. Use during breaks or when you feel frustration rising. Activates the parasympathetic system in 90 seconds.', duration: '2 min' },
+  ],
+  faq: [
+    { question: 'Do I need to be an athlete to score high on the Body Pillar?', answer: 'No. The Playbook measures consistency, not intensity. A 20-minute walk 4x/week scores higher than a sporadic marathon. What matters is regularity.' },
+    { question: 'How is sleep measured?', answer: 'You log sleep hours in your daily check-in. The AI Coach analyzes weekly averages and correlates them with your feelings and grind volume. Science shows that below 7h, complex decisions deteriorate significantly.' },
+    { question: 'Do breathing techniques actually work in poker?', answer: 'Yes. Box breathing and 4-7-8 are used by military and Olympic athletes for arousal regulation in high-pressure situations. In poker, they are especially useful on bubbles, final tables and after bad beats.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

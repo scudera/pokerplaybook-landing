@@ -14,20 +14,45 @@ const {
 } = Astro.props;
 
 const siteName = 'Poker Playbook';
-const locale = 'pt_BR';
+
+const canonicalPath = Astro.url.pathname;
+const isEn = canonicalPath.startsWith('/en');
+const ptPath = isEn ? canonicalPath.replace('/en/', '/').replace('/en', '/').replace('/body', '/corpo').replace('/mind', '/mente').replace('/craft', '/oficio').replace('/system', '/sistema') : canonicalPath;
+const enPath = isEn ? canonicalPath : canonicalPath === '/' ? '/en/' : `/en${canonicalPath.replace('/corpo', '/body').replace('/mente', '/mind').replace('/oficio', '/craft').replace('/sistema', '/system')}`;
+const ptURL = new URL(ptPath, Astro.site).href;
+const enURL = new URL(enPath, Astro.site).href;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Poker Playbook',
-  description: 'Plataforma de performance para jogadores profissionais de poker MTT. Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game.',
+  description: isEn
+    ? 'Performance platform for professional MTT poker players. Daily check-in, AI Coach powered by Claude Opus, 4-Pillar Scorecard and mental game techniques.'
+    : 'Plataforma de performance para jogadores profissionais de poker MTT. Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e técnicas de mental game.',
   url: 'https://pokerplaybook.pro',
   applicationCategory: 'SportsApplication',
   operatingSystem: 'Web',
   offers: [
-    { '@type': 'Offer', name: 'Grind', price: '0', priceCurrency: 'BRL' },
-    { '@type': 'Offer', name: 'Pro', price: '29', priceCurrency: 'BRL', billingIncrement: 'P1M' },
-    { '@type': 'Offer', name: 'Elite', price: '58', priceCurrency: 'BRL', billingIncrement: 'P1M' },
+    {
+      '@type': 'Offer',
+      name: 'Grind',
+      price: '0',
+      priceCurrency: 'BRL',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Pro',
+      price: '29',
+      priceCurrency: 'BRL',
+      billingIncrement: 'P1M',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Elite',
+      price: '58',
+      priceCurrency: 'BRL',
+      billingIncrement: 'P1M',
+    },
   ],
   author: {
     '@type': 'Person',
@@ -56,12 +81,16 @@ const orgJsonLd = {
 <meta name="robots" content="index, follow" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
+<!-- Hreflang -->
+<link rel="alternate" hreflang="pt-BR" href={ptURL} />
+<link rel="alternate" hreflang="en" href={enURL} />
+<link rel="alternate" hreflang="x-default" href={ptURL} />
+
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- Language -->
-<html lang="pt-BR" />
-<meta property="og:locale" content={locale} />
+<!-- Locale -->
+<meta property="og:locale" content={isEn ? 'en_US' : 'pt_BR'} />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />

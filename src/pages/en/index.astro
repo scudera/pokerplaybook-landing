@@ -1,0 +1,552 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Poker Playbook — Professional Performance for MTT Tournaments';
+const description = 'Daily check-in, AI Coach powered by Claude Opus, 4-Pillar Scorecard and mental game techniques. Start free. Pro and Elite plans for serious grinders.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is Poker Playbook free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Grind plan is 100% free and includes daily check-in, score, routine, mindset and records. Pro ($29/mo) and Elite ($58/mo) plans unlock AI Coach, advanced analytics, custom checklist and more.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How does the AI Coach work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The AI Coach is powered by Claude Opus and analyzes your weekly data — tournament volume, exercise, sleep, study, feelings — generating personalized reports based on Jared Tendler, Tommy Angelo and performance science frameworks.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the 4 Pillars?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The 4 dimensions of poker performance: Body (exercise, sleep, breathing), Mind (gratitude, emotional awareness), Craft (grind volume and study) and System (consistency and discipline). Each pillar gets a weekly score.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does it work for cash games?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Poker Playbook is designed exclusively for MTT tournament players. Metrics, goals and analyses are calibrated for the tournament format.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is my data private?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use it on mobile?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Poker Playbook is a responsive web app optimized for any browser — desktop, tablet or mobile. No download needed.'
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="/en/" class="nav-logo">
+        <span class="spade">♠</span> Poker Playbook
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#pillars">4 Pillars</a></li>
+        <li><a href="#coach">AI Coach</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Plans</a></li>
+        <li><a href="https://blog.pokerplaybook.pro" target="_blank">Blog</a></li>
+        <li><a href="/" class="lang-switch" title="Português">PT</a></li>
+        <li><a href="https://app.pokerplaybook.pro" class="nav-cta">Open App →</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          ♠ Start free — plans from R$29/month
+        </div>
+
+        <h1>
+          Play your <span class="gradient">best poker</span> — every day.
+        </h1>
+
+        <p class="hero-sub">
+          Daily check-in, AI Coach powered by Claude Opus, 4-Pillar Scorecard and 10 mindset techniques.
+          Everything a professional MTT player needs to perform at the highest level.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://app.pokerplaybook.pro" class="btn-primary">
+            Start free →
+          </a>
+          <a href="#how-it-works" class="btn-secondary">
+            How it works
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> Free Grind plan
+          </div>
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> No credit card
+          </div>
+          <div class="hero-proof-item">
+            <span class="icon">✓</span> 2-minute setup
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4 PILLARS ========== -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">The 4 Pillars</span>
+        <h2 class="section-title">Professional performance is more than poker</h2>
+        <p class="section-subtitle">
+          The world's best players take care of 4 dimensions. Poker Playbook measures, analyzes and evolves each one.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <a href="/en/body" class="pillar-card animate-on-scroll" data-pillar="corpo">
+          <div class="pillar-icon">💪</div>
+          <h3>Body <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
+          <p>Exercise, sleep, wake-up routine and breathing. The physiological foundation that sustains focus and emotional regulation at the table.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Exercise</span>
+            <span class="pillar-metric">Sleep</span>
+            <span class="pillar-metric">Wake-up</span>
+            <span class="pillar-metric">Breathing</span>
+          </div>
+        </a>
+
+        <a href="/en/mind" class="pillar-card animate-on-scroll" data-pillar="mente">
+          <div class="pillar-icon">🧠</div>
+          <h3>Mind <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
+          <p>Daily gratitude and emotional awareness. Identify and break tilt patterns before they cost you buy-ins.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Gratitude</span>
+            <span class="pillar-metric">Feelings</span>
+            <span class="pillar-metric">A/B/C Game</span>
+          </div>
+        </a>
+
+        <a href="/en/craft" class="pillar-card animate-on-scroll" data-pillar="oficio">
+          <div class="pillar-icon">🎯</div>
+          <h3>Craft <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
+          <p>Grind volume and hours of deliberate study. Quantity with quality — the formula for moving up in stakes.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Tournaments</span>
+            <span class="pillar-metric">Study (h)</span>
+            <span class="pillar-metric">Deliberate practice</span>
+          </div>
+        </a>
+
+        <a href="/en/system" class="pillar-card animate-on-scroll" data-pillar="sistema">
+          <div class="pillar-icon">⚡</div>
+          <h3>System <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
+          <p>Consistency and perfect days. Doing it right once isn't enough — sustainable routine is what drives results.</p>
+          <div class="pillar-metrics">
+            <span class="pillar-metric">Perfect days</span>
+            <span class="pillar-metric">Streak</span>
+            <span class="pillar-metric">Adherence</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AI COACH ========== -->
+  <section class="section coach-section" id="coach">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">AI Coach</span>
+        <h2 class="section-title">Your personal performance coach, powered by AI</h2>
+        <p class="section-subtitle">
+          Claude Opus analyzes your weekly data and generates personalized reports with elite scientific frameworks.
+        </p>
+      </div>
+
+      <div class="coach-grid">
+        <div class="coach-features animate-on-scroll">
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📊</div>
+            <div>
+              <h4>Weekly Review</h4>
+              <p>Complete analysis of your week with 4-Pillar scores, trends and specific recommendations.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📈</div>
+            <div>
+              <h4>Monthly & Yearly Review</h4>
+              <p>Big picture view with pillar evolution, long-term patterns and periodization adjustments.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">🔬</div>
+            <div>
+              <h4>Emotional Patterns</h4>
+              <p>Identifies tilt triggers, body-performance correlations, and recurring emotional cycles.</p>
+            </div>
+          </div>
+          <div class="coach-feature">
+            <div class="coach-feature-icon">📚</div>
+            <div>
+              <h4>Scientific Frameworks</h4>
+              <p>Jared Tendler, Tommy Angelo, Yerkes-Dodson, deliberate practice and integrated periodization.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coach-preview animate-on-scroll">
+          <div class="coach-preview-header">
+            <div class="coach-avatar">♠</div>
+            <div>
+              <div class="coach-preview-name">Playbook Coach</div>
+              <div class="coach-preview-label">Claude Opus · Weekly Review</div>
+            </div>
+          </div>
+          <div class="coach-bubble">
+            <strong>Solid week.</strong> 847 tournaments across 4 grind days — 80% adherence. Exercise dropped to 2/4 days, which may explain the sleep average dropping from 7.2h to 6.5h...
+          </div>
+          <div class="coach-bubble">
+            I recommend focusing on the <strong>Body Pillar</strong> this week. Tommy Angelo would say: before chasing more volume, make sure your C-game is being eliminated through consistent sleep and exercise.
+          </div>
+          <div class="coach-scorecard">
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-corpo)">7.2</div>
+              <div class="coach-score-label">Body</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-mente)">8.5</div>
+              <div class="coach-score-label">Mind</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-oficio)">8.0</div>
+              <div class="coach-score-label">Craft</div>
+            </div>
+            <div class="coach-score">
+              <div class="coach-score-value" style="color: var(--pillar-sistema)">7.8</div>
+              <div class="coach-score-label">System</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section" id="how-it-works" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">How it works</span>
+        <h2 class="section-title">3 steps. 2 minutes a day.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          A simple routine that transforms your performance over the weeks.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step animate-on-scroll">
+          <div class="step-number">1</div>
+          <h3>Daily check-in</h3>
+          <p>Log tournaments, exercise, sleep, study and feelings. Takes less than 2 minutes.</p>
+        </div>
+
+        <div class="step animate-on-scroll">
+          <div class="step-number">2</div>
+          <h3>AI Coach analyzes</h3>
+          <p>At the end of the week, the Coach generates your 4-Pillar Scorecard with actionable insights.</p>
+        </div>
+
+        <div class="step animate-on-scroll">
+          <div class="step-number">3</div>
+          <h3>Evolve consistently</h3>
+          <p>Track patterns, break negative streaks and build the routine of an elite professional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXTRA FEATURES ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">All included</span>
+        <h2 class="section-title">Complete performance tools</h2>
+      </div>
+
+      <div class="pillars-grid" style="margin-top: 2.5rem;">
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🧘</div>
+          <h3>10 Mindset Techniques</h3>
+          <p>4-7-8 breathing, box breathing, gratitude, visualization and more — with built-in timer.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📋</div>
+          <h3>Custom Checklist</h3>
+          <p>Create custom items for your routine. The AI Coach automatically analyzes your adherence.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🏆</div>
+          <h3>Personal Records</h3>
+          <p>Track and celebrate your milestones — largest field, best ITM streak, record volume.</p>
+        </div>
+        <div class="pillar-card animate-on-scroll" style="border-top: none;">
+          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📅</div>
+          <h3>Weekly Schedule</h3>
+          <p>Set your ideal routine — grind days, study days and rest days — and measure real adherence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="pricing" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Plans</span>
+        <h2 class="section-title">Start free and upgrade as you need</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          From basic check-in to unlimited AI Coach. Choose the level that matches your grind.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-tier animate-on-scroll">
+          <h3 class="tier-name">Grind</h3>
+          <p class="tier-tagline">Full app, no AI</p>
+          <div class="tier-price">
+            <span class="tier-amount">Free</span>
+          </div>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Daily check-in + standard checklist</li>
+            <li><span class="check">✓</span> General score, financials, study</li>
+            <li><span class="check">✓</span> Routine, flowchart, mindset, breathing</li>
+            <li><span class="check">✓</span> Roadmap + milestones</li>
+            <li><span class="check">✓</span> Streaks + records</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier">
+            Start free
+          </a>
+        </div>
+
+        <div class="pricing-tier pricing-tier--featured animate-on-scroll">
+          <div class="tier-badge">Recommended</div>
+          <h3 class="tier-name">👑 Pro</h3>
+          <p class="tier-tagline">All of Grind + analytics + AI</p>
+          <div class="tier-price">
+            <span class="tier-amount">R$29</span>
+            <span class="tier-period">/month</span>
+          </div>
+          <p class="tier-annual">R$349/year (save R$119)</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Everything in Grind +</li>
+            <li><span class="check">✓</span> Full 4-Pillar Dashboard</li>
+            <li><span class="check">✓</span> Detailed analytics (check-in, mental tech)</li>
+            <li><span class="check">✓</span> Custom checklist</li>
+            <li><span class="check">✓</span> Goals + vacation + export</li>
+            <li><span class="check">✓</span> Mastery + XP + achievements</li>
+            <li><span class="check">✓</span> AI Coach: Weekly, Monthly, Patterns (10/mo)</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier btn-tier--featured">
+            Subscribe Pro
+          </a>
+        </div>
+
+        <div class="pricing-tier animate-on-scroll">
+          <h3 class="tier-name">💎 Elite</h3>
+          <p class="tier-tagline">All of Pro + unlimited AI</p>
+          <div class="tier-price">
+            <span class="tier-amount">R$58</span>
+            <span class="tier-period">/month</span>
+          </div>
+          <p class="tier-annual">R$697/year (save R$251)</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Everything in Pro +</li>
+            <li><span class="check">✓</span> Unlimited AI Coach (+ YTD, Complete)</li>
+            <li><span class="check">✓</span> Full Scientist Agent</li>
+            <li><span class="check">✓</span> Dynamic metrics</li>
+            <li><span class="check">✓</span> Rankings + early access</li>
+            <li><span class="check dim">◇</span> Coming soon: AI chat, alerts, correlations</li>
+          </ul>
+          <a href="https://app.pokerplaybook.pro" class="btn-tier btn-tier--elite">
+            Subscribe Elite
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">FAQ</span>
+        <h2 class="section-title">Frequently asked questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is Poker Playbook free?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The Grind plan is 100% free — no trial period, no credit card required. It includes daily check-in, score, routine, mindset and records. For AI Coach, advanced analytics and custom checklist, there are Pro (R$29/mo) and Elite (R$58/mo) plans. All paid plans have a 25% discount on the annual plan.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does the AI Coach work?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The AI Coach is powered by Claude Opus (Anthropic's frontier AI) and analyzes your check-in data — tournament volume, exercise, sleep, study, feelings during the grind. It generates 5 report types (weekly, monthly, yearly, complete and emotional patterns) using frameworks from Jared Tendler, Tommy Angelo, sports periodization and deliberate practice.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What are the 4 Pillars?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The 4 dimensions of professional poker performance: <strong>Body</strong> (exercise, sleep, breathing), <strong>Mind</strong> (gratitude, emotional awareness), <strong>Craft</strong> (grind volume and study hours) and <strong>System</strong> (consistency and perfect days). Each pillar gets a 0-10 score in your weekly report.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does it work for cash games?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Poker Playbook is designed exclusively for MTT tournament players. Metrics (volume in tournaments, not hands), goals and AI Coach analyses are all calibrated for the tournament format. If you play cash, the performance features (body, mind, routine) can still help, but the experience is optimized for MTT.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is my data private?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties or used to train AI models.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I use it on mobile?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Poker Playbook is a responsive web app optimized for any browser — desktop, tablet or mobile. No app download needed. Just go to app.pokerplaybook.pro and sign in.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="section cta-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">
+          Ready to play your best poker?
+        </h2>
+        <p class="section-subtitle" style="margin: 0 auto 2rem;">
+          Join the grinders who turned performance into routine. Free, no hassle, in 2 minutes.
+        </p>
+        <a href="https://app.pokerplaybook.pro" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem; position: relative;">
+          Start now — it's free →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        © 2026 Poker Playbook · <a href="https://pokerplaybook.pro">pokerplaybook.pro</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://app.pokerplaybook.pro">App</a></li>
+        <li><a href="https://blog.pokerplaybook.pro">Blog</a></li>
+        <li><a href="mailto:pokerplaybookpro@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script is:inline>
+    document.getElementById('nav-toggle')?.addEventListener('click', () => {
+      document.getElementById('nav-links')?.classList.toggle('open');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-links')?.classList.remove('open');
+      });
+    });
+  </script>
+</Layout>

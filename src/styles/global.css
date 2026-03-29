@@ -1021,6 +1021,30 @@ img {
 }
 
 /* ============================================
+   Language Switcher
+   ============================================ */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted) !important;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.lang-switch:hover {
+  color: var(--accent-light) !important;
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+/* ============================================
    Animations
    ============================================ */
 @keyframes fadeInUp {

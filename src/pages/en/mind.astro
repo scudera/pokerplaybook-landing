@@ -1,0 +1,36 @@
+---
+import PillarPage from '../../components/PillarPage.astro';
+
+const data = {
+  pillar: 'Mind',
+  color: '#7F77DD',
+  icon: '🧠',
+  title: 'Mind Pillar: Emotional Mastery for Poker Performance',
+  description: 'Daily gratitude and emotional awareness. The Mind Pillar develops your ability to recognize, process and regulate emotions before they leak into your game.',
+  metaTitle: 'Mind Pillar — Emotional Awareness & Tilt Control for Poker | Poker Playbook',
+  metaDescription: 'Master tilt control and emotional awareness for MTT tournaments. The Mind Pillar tracks gratitude, feelings and A/B/C Game patterns to elevate your mental game.',
+  weight: '20%',
+  lang: 'en',
+  components: [
+    { name: 'Gratitude', weight: '50%', description: 'Daily gratitude rewires the brain for positive pattern recognition. Players who practice gratitude consistently report better tilt control and longer focus windows.' },
+    { name: 'Feelings', weight: '50%', description: 'Logging emotions during the grind creates a data trail that reveals hidden patterns. The AI Coach correlates feelings with body metrics and performance outcomes.' },
+  ],
+  frameworks: [
+    { name: 'Jared Tendler — A/B/C Game Model', concept: 'Every player has three distinct performance levels. The goal is not to always play your A-game, but to systematically raise the floor of your C-game.', application: 'The AI Coach identifies when your C-game shows up and correlates it with sleep, exercise and emotional state to find root causes.' },
+    { name: 'Tommy Angelo — Lopping Off C-Game', concept: 'Instead of chasing brilliance, focus on eliminating your worst plays. Every time you prevent a C-game session, your overall results improve permanently.', application: 'Weekly reviews highlight C-game patterns and give specific, actionable recommendations to prevent them.' },
+    { name: 'Mindfulness — Non-Judgmental Awareness', concept: 'Observing your thoughts and emotions without judgment creates space between stimulus and response. This space is where tilt control lives.', application: 'The Feelings tracker builds awareness over time. After 4+ weeks, players can see clear cause-effect chains in their emotional patterns.' },
+  ],
+  exercises: [
+    { title: 'Morning Gratitude (3 Things)', description: 'Write 3 things you are grateful for before checking your phone. Can be poker-related or personal. Builds positive neural pathways that last all day.', duration: '3 min' },
+    { title: 'Mid-Session Emotional Check', description: 'Between tournaments, rate your emotional state 1-10. If below 5, take a 10-minute break. Simple but prevents cascading tilt across multiple events.', duration: '1 min' },
+    { title: 'Post-Session Debrief', description: 'Write down your dominant emotion during the session and one moment where you maintained composure. Reinforces positive patterns and builds self-awareness.', duration: '5 min' },
+  ],
+  faq: [
+    { question: 'How does gratitude help poker performance?', answer: 'Research shows daily gratitude practice reduces cortisol, improves sleep quality and increases emotional resilience. For poker players, this translates to better tilt control, longer focus windows and more rational decision-making under pressure.' },
+    { question: 'What if I don\'t feel any strong emotions during the grind?', answer: 'That is actually an emotion worth logging — neutrality or detachment. Over time, the AI Coach identifies whether your "neutral" state correlates with A-game or autopilot. Many players discover their best sessions happen when they feel calm but engaged.' },
+    { question: 'Can the AI Coach really detect tilt patterns?', answer: 'Yes. By cross-referencing your feelings log with Body Pillar data (sleep, exercise) and Craft Pillar data (volume, results), the Coach identifies reliable tilt triggers. Many players discover patterns they never noticed on their own.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

@@ -1,0 +1,35 @@
+---
+import PillarPage from '../../components/PillarPage.astro';
+
+const data = {
+  pillar: 'System',
+  color: '#EF9F27',
+  icon: '⚡',
+  title: 'System Pillar: Consistency & Discipline for Poker Performance',
+  description: 'Perfect days and sustainable routines. The System Pillar measures your ability to show up and execute your plan day after day — the ultimate edge in poker.',
+  metaTitle: 'System Pillar — Consistency & Perfect Days for Poker | Poker Playbook',
+  metaDescription: 'Build unbreakable consistency in your poker career. The System Pillar tracks perfect days, streaks and adherence to turn discipline into your competitive edge.',
+  weight: '20%',
+  lang: 'en',
+  components: [
+    { name: 'Perfect Days', weight: '100%', description: 'A perfect day means completing every item on your schedule — grind, study, exercise, sleep, mindset. The System Pillar counts how many perfect days you achieve per week.' },
+  ],
+  frameworks: [
+    { name: 'Atomic Habits — James Clear', concept: 'Small, consistent actions compound over time. A 1% daily improvement leads to 37x improvement over a year. The system is more important than the goal.', application: 'The daily check-in IS the system. By simply logging every day, you build the habit loop that sustains all other pillars. The streak counter reinforces the chain.' },
+    { name: 'Tommy Angelo — Bliscipline', concept: 'Discipline that becomes blissful. When your routine is so dialed in that following it feels natural, not forced. The highest level of poker professionalism.', application: 'The Scorecard tracks your journey from forced discipline to natural routine. As your System score stabilizes above 8, you have reached Bliscipline territory.' },
+    { name: 'Periodization — Recovery as Performance', concept: 'Rest days are not days off — they are part of the system. Scheduled recovery prevents burnout and makes grind days more productive.', application: 'Vacation periods and rest days are built into the schedule. The AI Coach does not penalize planned rest — only unplanned absences hurt your System score.' },
+  ],
+  exercises: [
+    { title: 'Define Your Perfect Day', description: 'Write down exactly what a perfect day looks like for grind days and study days separately. Be specific: wake time, exercise type, tournament count, study topic, sleep target.', duration: '15 min (once)' },
+    { title: 'Weekly Schedule Review', description: 'Every Sunday, review last week\'s adherence and adjust this week\'s schedule if needed. Keep targets realistic — an achievable plan executed beats an ambitious plan abandoned.', duration: '10 min' },
+    { title: 'Streak Awareness', description: 'Track your current streak of consecutive scheduled days completed. When you break a streak, don\'t catastrophize — start a new one immediately. The goal is longer and longer chains.', duration: 'Ongoing' },
+  ],
+  faq: [
+    { question: 'What counts as a perfect day?', answer: 'A perfect day means you completed everything scheduled for that day. If it is a grind day, you hit your tournament target, exercised, slept well, did your check-in. If it is a rest day, you actually rested. The definition adapts to your personal schedule.' },
+    { question: 'Do vacation days count against my System score?', answer: 'No. When you mark a period as vacation in the Playbook, those days are excluded from all calculations. The system only measures adherence to your working schedule. Rest is part of the plan.' },
+    { question: 'How important is the System Pillar compared to the others?', answer: 'The System Pillar is the multiplier. You can have great Body, Mind and Craft scores for a week, but without consistency those gains evaporate. System is worth 20% of the overall score, but its real impact is sustaining the other three pillars over time.' },
+  ],
+};
+---
+
+<PillarPage {...data} />

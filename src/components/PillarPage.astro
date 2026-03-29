@@ -1,0 +1,344 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Props {
+  pillar: string;
+  color: string;
+  icon: string;
+  title: string;
+  description: string;
+  metaTitle: string;
+  metaDescription: string;
+  weight: string;
+  lang?: string;
+  components: { name: string; weight: string; description: string }[];
+  frameworks: { name: string; concept: string; application: string }[];
+  exercises: { title: string; description: string; duration: string }[];
+  faq: { question: string; answer: string }[];
+}
+
+const { pillar, color, icon, title, description, metaTitle, metaDescription, weight, lang, components, frameworks, exercises, faq } = Astro.props;
+const isEn = lang === 'en';
+const home = isEn ? '/en/' : '/';
+const pillarsAnchor = isEn ? '/en/#pillars' : '/#pilares';
+const langSwitchUrl = isEn ? Astro.url.pathname.replace('/en/', '/').replace('/body', '/corpo').replace('/mind', '/mente').replace('/craft', '/oficio').replace('/system', '/sistema') : `/en${Astro.url.pathname.replace('/corpo', '/body').replace('/mente', '/mind').replace('/oficio', '/craft').replace('/sistema', '/system')}`;
+const langSwitchLabel = isEn ? 'PT' : 'EN';
+const langSwitchTitle = isEn ? 'Português' : 'English';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer }
+  }))
+};
+---
+
+<Layout title={metaTitle} description={metaDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href={home} class="nav-logo"><span class="spade">♠</span> Poker Playbook</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href={pillarsAnchor}>{isEn ? '4 Pillars' : '4 Pilares'}</a></li>
+        <li><a href={`${home}#coach`}>AI Coach</a></li>
+        <li><a href="https://blog.pokerplaybook.pro" target="_blank">Blog</a></li>
+        <li><a href={langSwitchUrl} class="lang-switch" title={langSwitchTitle}>{langSwitchLabel}</a></li>
+        <li><a href="https://app.pokerplaybook.pro" class="nav-cta">{isEn ? 'Open App →' : 'Abrir App →'}</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pillar-hero section" style={`--pillar-color: ${color};`}>
+    <div class="container">
+      <a href={pillarsAnchor} class="back-link">{isEn ? '← Back to 4 Pillars' : '← Voltar aos 4 Pilares'}</a>
+      <div class="pillar-hero-content">
+        <div class="pillar-hero-icon">{icon}</div>
+        <h1 class="pillar-hero-title">{title}</h1>
+        <p class="pillar-hero-desc">{description}</p>
+        <div class="pillar-hero-weight">
+          <span class="pillar-weight-number">{weight}</span>
+          <span class="pillar-weight-label">{isEn ? 'of overall score' : 'do score geral'}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Componentes -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">{isEn ? 'Components' : 'Componentes'}</span>
+      <h2 class="section-title">{isEn ? `What makes up the ${pillar} Pillar` : `O que compõe o Pilar ${pillar}`}</h2>
+      <div class="components-grid">
+        {components.map(c => (
+          <div class="component-card">
+            <div class="component-header">
+              <h3>{c.name}</h3>
+              <span class="component-weight" style={`color: ${color};`}>{c.weight}</span>
+            </div>
+            <p>{c.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Frameworks -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <span class="section-label">{isEn ? 'The science behind it' : 'Ciência por trás'}</span>
+      <h2 class="section-title">{isEn ? 'Applied frameworks' : 'Frameworks aplicados'}</h2>
+      <div class="frameworks-list">
+        {frameworks.map(f => (
+          <div class="framework-item">
+            <h3>{f.name}</h3>
+            <div class="framework-detail">
+              <div>
+                <span class="framework-tag">{isEn ? 'Concept' : 'Conceito'}</span>
+                <p>{f.concept}</p>
+              </div>
+              <div>
+                <span class="framework-tag" style={`background: ${color}22; color: ${color};`}>{isEn ? 'Playbook Application' : 'Aplicação no Playbook'}</span>
+                <p>{f.application}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Exercícios -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">{isEn ? 'Practice' : 'Prática'}</span>
+      <h2 class="section-title">{isEn ? 'Exercises the AI Coach recommends' : 'Exercícios que o AI Coach recomenda'}</h2>
+      <div class="exercises-grid">
+        {exercises.map((e, i) => (
+          <div class="exercise-card">
+            <div class="exercise-number" style={`border-color: ${color}; color: ${color};`}>{i + 1}</div>
+            <h3>{e.title}</h3>
+            <p>{e.description}</p>
+            <span class="exercise-duration">{e.duration}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">{isEn ? `Questions about the ${pillar} Pillar` : `Perguntas sobre o Pilar ${pillar}`}</h2>
+      <div class="faq-list">
+        {faq.map(f => (
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              {f.question}
+              <span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{f.answer}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title">{isEn ? `Start measuring your ${pillar} Pillar today` : `Comece a medir seu Pilar ${pillar} hoje`}</h2>
+      <p class="section-subtitle" style="margin: 0 auto 2rem;">
+        {isEn ? 'Daily check-in in under 2 minutes. The AI Coach analyzes your weekly evolution.' : 'Check-in diário em menos de 2 minutos. O AI Coach analisa sua evolução semanal.'}
+      </p>
+      <a href="https://app.pokerplaybook.pro" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+        {isEn ? 'Start free →' : 'Começar grátis →'}
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">© 2026 Poker Playbook · <a href="https://pokerplaybook.pro">pokerplaybook.pro</a></div>
+      <ul class="footer-links">
+        <li><a href="https://app.pokerplaybook.pro">App</a></li>
+        <li><a href="https://blog.pokerplaybook.pro">Blog</a></li>
+        <li><a href="mailto:pokerplaybookpro@gmail.com">{isEn ? 'Contact' : 'Contato'}</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script is:inline>
+    document.getElementById('nav-toggle')?.addEventListener('click', () => {
+      document.getElementById('nav-links')?.classList.toggle('open');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+  .pillar-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar-hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--pillar-color) 15%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--accent-light); }
+  .pillar-hero-content { position: relative; z-index: 1; max-width: 640px; }
+  .pillar-hero-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .pillar-hero-title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .pillar-hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .pillar-hero-weight {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+  }
+  .pillar-weight-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--pillar-color);
+  }
+  .pillar-weight-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .component-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+  .component-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .component-header h3 { font-size: 1rem; font-weight: 600; }
+  .component-weight { font-size: 0.85rem; font-weight: 700; }
+  .component-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+  .frameworks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .framework-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+  .framework-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 1rem; }
+  .framework-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media (max-width: 640px) { .framework-detail { grid-template-columns: 1fr; } }
+  .framework-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .framework-detail p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+  .exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .exercise-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+  .exercise-number {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .exercise-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .exercise-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem; }
+  .exercise-duration {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0.6rem;
+    background: rgba(255,255,255,0.04);
+    border-radius: 100px;
+  }
+</style>
