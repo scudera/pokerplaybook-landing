@@ -37,7 +37,7 @@ const faqSchema = {
       name: 'Funciona para cash game?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'O Poker Playbook é desenhado exclusivamente para jogadores de torneios MTT. As métricas, metas e análises são calibradas para o formato de torneio.'
+        text: 'O Poker Playbook foi construído para MTT. Métricas, metas e análises do AI Coach são calibradas para torneios — volume em torneios, buy-in, field, ITM. As ferramentas de performance mental (rotina, mindset, respiração) funcionam pra qualquer formato, mas a experiência completa é otimizada pra quem grinda MTT.'
       }
     },
     {
@@ -46,6 +46,14 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados para gerar análises, mas nenhuma informação é compartilhada com terceiros.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Isso realmente funciona?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não vamos prometer que seu ROI vai subir. Poker tem variância e resultado depende de muitos fatores. O que o Playbook faz é te dar sistema, dados e insights pra construir uma base mental sólida. O impacto no resultado é consequência de jogar com melhor preparo — consistentemente, não por sorte.'
       }
     },
     {
@@ -92,12 +100,11 @@ const faqSchema = {
         </div>
 
         <h1>
-          Jogue seu <span class="gradient">melhor poker</span> — todos os dias.
+          Você sabe jogar. Mas sabe <span class="gradient">se preparar?</span>
         </h1>
 
         <p class="hero-sub">
-          Check-in diário, AI Coach com Claude Opus, Scorecard dos 4 Pilares e 10 técnicas de mindset.
-          Tudo o que um jogador profissional de MTT precisa para performar no mais alto nível.
+          Solver não resolve tilt. Tracker não mede sono. Coach não tá lá todo dia. O Poker Playbook é a primeira plataforma de performance mental com IA, construída por quem vive MTT.
         </p>
 
         <div class="hero-actions">
@@ -124,14 +131,27 @@ const faqSchema = {
     </div>
   </section>
 
+  <!-- ========== A DOR ========== -->
+  <section class="section" id="problema" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">O problema</span>
+        <h2 class="section-title">O mercado te deu tudo. Menos isso.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Existem solvers pra cada spot. Trackers pra cada sessão. Coaches pra cada leak. Mas para o lado mental — o que realmente separa quem sobe de stakes de quem fica girando — não existe ferramenta. Sem método pra trackear. Sem dados pra mensurar. Sem sistema pra avaliar. Só força de vontade — e ela não escala.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== 4 PILARES ========== -->
   <section class="section" id="pilares">
     <div class="container">
       <div class="animate-on-scroll">
         <span class="section-label">Os 4 Pilares</span>
-        <h2 class="section-title">Performance profissional é mais que poker</h2>
+        <h2 class="section-title">4 dimensões. 1 sistema.</h2>
         <p class="section-subtitle">
-          Os melhores jogadores do mundo cuidam de 4 dimensões. O Poker Playbook mede, analisa e evolui cada uma delas.
+          Você já sabe que tilt custa buy-ins e que dormir mal afeta decisão. O Poker Playbook transforma isso em dados e rotina.
         </p>
       </div>
 
@@ -139,7 +159,7 @@ const faqSchema = {
         <div class="pillar-card animate-on-scroll" data-pillar="corpo">
           <div class="pillar-icon">💪</div>
           <h3>Corpo</h3>
-          <p>Exercício, sono, despertar e respiração. A base fisiológica que sustenta foco e regulação emocional na mesa.</p>
+          <p>Sono, exercício, despertar e respiração. Quando o corpo falha, o A-game some. O app mede isso todo dia — pra você parar de adivinhar e começar a saber.</p>
           <div class="pillar-metrics">
             <span class="pillar-metric">Exercício</span>
             <span class="pillar-metric">Sono</span>
@@ -151,7 +171,7 @@ const faqSchema = {
         <div class="pillar-card animate-on-scroll" data-pillar="mente">
           <div class="pillar-icon">🧠</div>
           <h3>Mente</h3>
-          <p>Gratidão diária e awareness emocional. Identifique e quebre padrões de tilt antes que eles custem buy-ins.</p>
+          <p>Gratidão, awareness emocional, controle de tilt. Não é "ser positivo" — é identificar padrões antes que eles custem dinheiro.</p>
           <div class="pillar-metrics">
             <span class="pillar-metric">Gratidão</span>
             <span class="pillar-metric">Feelings</span>
@@ -162,7 +182,7 @@ const faqSchema = {
         <div class="pillar-card animate-on-scroll" data-pillar="oficio">
           <div class="pillar-icon">🎯</div>
           <h3>Ofício</h3>
-          <p>Volume de grind e horas de estudo deliberado. Quantidade com qualidade — a fórmula de quem sobe de stakes.</p>
+          <p>Volume e estudo deliberado. O app mede se você tá cumprindo o que planejou — sem se enganar.</p>
           <div class="pillar-metrics">
             <span class="pillar-metric">Torneios</span>
             <span class="pillar-metric">Estudo (h)</span>
@@ -173,7 +193,7 @@ const faqSchema = {
         <div class="pillar-card animate-on-scroll" data-pillar="sistema">
           <div class="pillar-icon">⚡</div>
           <h3>Sistema</h3>
-          <p>Consistência e dias perfeitos. Não basta fazer certo um dia — é a rotina sustentável que gera resultados.</p>
+          <p>Consistência mata talento. Dias perfeitos, streaks, aderência à rotina. O Playbook mostra se você tá construindo hábito ou só reagindo.</p>
           <div class="pillar-metrics">
             <span class="pillar-metric">Dias perfeitos</span>
             <span class="pillar-metric">Streak</span>
@@ -189,9 +209,9 @@ const faqSchema = {
     <div class="container">
       <div class="animate-on-scroll">
         <span class="section-label">AI Coach</span>
-        <h2 class="section-title">Seu coach de performance pessoal, alimentado por IA</h2>
+        <h2 class="section-title">Um coach que conhece seus dados, não suas desculpas.</h2>
         <p class="section-subtitle">
-          Claude Opus analisa seus dados semanais e gera relatórios personalizados com frameworks científicos de elite.
+          Claude Opus analisa seus check-ins e cruza sono com volume, exercício com tilt, rotina com resultado. Toda semana, um relatório que nenhum coach humano tem tempo de fazer.
         </p>
       </div>
 
@@ -201,28 +221,28 @@ const faqSchema = {
             <div class="coach-feature-icon">📊</div>
             <div>
               <h4>Resumo Semanal</h4>
-              <p>Análise completa da sua semana com score dos 4 Pilares, tendências e recomendações específicas.</p>
+              <p>Score dos 4 Pilares, o que funcionou, o que não funcionou, e o que fazer na próxima semana. Direto ao ponto.</p>
             </div>
           </div>
           <div class="coach-feature">
             <div class="coach-feature-icon">📈</div>
             <div>
               <h4>Resumo Mensal & Anual</h4>
-              <p>Visão macro com evolução de cada pilar, padrões de longo prazo e ajustes de periodização.</p>
+              <p>Padrões de longo prazo que você não enxerga no dia a dia. Evolução real com dados, não sensação.</p>
             </div>
           </div>
           <div class="coach-feature">
             <div class="coach-feature-icon">🔬</div>
             <div>
               <h4>Padrões Emocionais</h4>
-              <p>Identifica gatilhos de tilt, correlação entre corpo e performance, e ciclos emocionais recorrentes.</p>
+              <p>Quando você tilta mais? Depois de dormir mal? Em dias sem exercício? A IA encontra os gatilhos nos seus dados.</p>
             </div>
           </div>
           <div class="coach-feature">
             <div class="coach-feature-icon">📚</div>
             <div>
               <h4>Frameworks Científicos</h4>
-              <p>Jared Tendler, Tommy Angelo, Yerkes-Dodson, prática deliberada e periodização integrada.</p>
+              <p>Frameworks de Jared Tendler, Tommy Angelo, Yerkes-Dodson, prática deliberada e periodização — aplicados automaticamente aos seus dados.</p>
             </div>
           </div>
         </div>
@@ -269,7 +289,7 @@ const faqSchema = {
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
         <span class="section-label" style="justify-content: center;">Como funciona</span>
-        <h2 class="section-title">3 passos. 2 minutos por dia.</h2>
+        <h2 class="section-title">2 minutos por dia. O resto a IA faz.</h2>
         <p class="section-subtitle" style="margin: 0 auto;">
           Uma rotina simples que transforma sua performance ao longo das semanas.
         </p>
@@ -279,52 +299,19 @@ const faqSchema = {
         <div class="step animate-on-scroll">
           <div class="step-number">1</div>
           <h3>Check-in diário</h3>
-          <p>Registre torneios, exercício, sono, estudo e sentimentos. Leva menos de 2 minutos.</p>
+          <p>Registre torneios, sono, exercício, estudo e como você se sentiu. Menos de 2 minutos.</p>
         </div>
 
         <div class="step animate-on-scroll">
           <div class="step-number">2</div>
-          <h3>AI Coach analisa</h3>
-          <p>No fim da semana, o Coach gera seu Scorecard dos 4 Pilares com insights acionáveis.</p>
+          <h3>O Coach IA conecta os pontos</h3>
+          <p>O Coach IA cruza seus dados e encontra padrões: sono ruim → mais tilt? Sem exercício → menos volume? Os números respondem.</p>
         </div>
 
         <div class="step animate-on-scroll">
           <div class="step-number">3</div>
-          <h3>Evolua consistentemente</h3>
-          <p>Acompanhe padrões, quebre streaks negativas e construa a rotina de um profissional de elite.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FEATURES EXTRAS ========== -->
-  <section class="section" id="features">
-    <div class="container">
-      <div class="animate-on-scroll" style="text-align: center;">
-        <span class="section-label" style="justify-content: center;">Tudo incluído</span>
-        <h2 class="section-title">Ferramentas de performance completas</h2>
-      </div>
-
-      <div class="pillars-grid" style="margin-top: 2.5rem;">
-        <div class="pillar-card animate-on-scroll" style="border-top: none;">
-          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🧘</div>
-          <h3>10 Técnicas de Mindset</h3>
-          <p>Respiração 4-7-8, box breathing, gratidão, visualização e mais — com timer integrado.</p>
-        </div>
-        <div class="pillar-card animate-on-scroll" style="border-top: none;">
-          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📋</div>
-          <h3>Checklist Personalizável</h3>
-          <p>Crie itens customizados para sua rotina. O AI Coach analisa sua aderência automaticamente.</p>
-        </div>
-        <div class="pillar-card animate-on-scroll" style="border-top: none;">
-          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">🏆</div>
-          <h3>Recordes Pessoais</h3>
-          <p>Registre e celebre seus milestones — maior field, melhor ITM streak, volume recorde.</p>
-        </div>
-        <div class="pillar-card animate-on-scroll" style="border-top: none;">
-          <div class="pillar-icon" style="background: var(--accent-glow); color: var(--accent);">📅</div>
-          <h3>Agenda Semanal</h3>
-          <p>Defina sua rotina ideal — dias de grind, estudo e descanso — e meça a aderência real.</p>
+          <h3>Construa sua base mental</h3>
+          <p>Semana a semana, você deixa de reagir e começa a ter método. A rotina vira hábito. O hábito vira performance.</p>
         </div>
       </div>
     </div>
@@ -335,9 +322,9 @@ const faqSchema = {
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
         <span class="section-label" style="justify-content: center;">Planos</span>
-        <h2 class="section-title">Comece grátis e evolua conforme sua necessidade</h2>
+        <h2 class="section-title">Comece grátis. Evolua quando fizer sentido.</h2>
         <p class="section-subtitle" style="margin: 0 auto;">
-          Do check-in básico ao AI Coach ilimitado. Escolha o nível que combina com o seu grind.
+          Sem limite de tempo no plano gratuito. Quando quiser dados mais profundos e a IA, os planos pagos estão ali.
         </p>
       </div>
 
@@ -345,7 +332,7 @@ const faqSchema = {
         <!-- Grind (Free) -->
         <div class="pricing-tier animate-on-scroll">
           <h3 class="tier-name">Grind</h3>
-          <p class="tier-tagline">App completo, sem IA</p>
+          <p class="tier-tagline">Tudo pra começar a trackear sua performance mental. Sem limite de tempo.</p>
           <div class="tier-price">
             <span class="tier-amount">Grátis</span>
           </div>
@@ -365,7 +352,7 @@ const faqSchema = {
         <div class="pricing-tier pricing-tier--featured animate-on-scroll">
           <div class="tier-badge">Recomendado</div>
           <h3 class="tier-name">👑 Pro</h3>
-          <p class="tier-tagline">Tudo do Grind + analytics + AI</p>
+          <p class="tier-tagline">Dados profundos + IA. Pra quem quer entender seus padrões.</p>
           <div class="tier-price">
             <span class="tier-amount">R$29</span>
             <span class="tier-period">/mês</span>
@@ -388,7 +375,7 @@ const faqSchema = {
         <!-- Elite -->
         <div class="pricing-tier animate-on-scroll">
           <h3 class="tier-name">💎 Elite</h3>
-          <p class="tier-tagline">Tudo do Pro + AI ilimitado</p>
+          <p class="tier-tagline">IA ilimitada + Agente Cientista. O sistema completo.</p>
           <div class="tier-price">
             <span class="tier-amount">R$58</span>
             <span class="tier-period">/mês</span>
@@ -462,7 +449,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              O Poker Playbook foi desenhado exclusivamente para jogadores de torneios MTT. As métricas (volume em torneios, não em mãos), as metas e as análises do AI Coach são todas calibradas para o formato de torneio. Se você joga cash, as funcionalidades de performance (corpo, mente, rotina) ainda podem ajudar, mas a experiência é otimizada para MTT.
+              O Poker Playbook foi construído para MTT. Métricas, metas e análises do AI Coach são calibradas para torneios — volume em torneios, buy-in, field, ITM. As ferramentas de performance mental (rotina, mindset, respiração) funcionam pra qualquer formato, mas a experiência completa é otimizada pra quem grinda MTT.
             </div>
           </div>
         </div>
@@ -475,6 +462,18 @@ const faqSchema = {
           <div class="faq-answer">
             <div class="faq-answer-inner">
               Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados exclusivamente para gerar suas análises pessoais. Nenhuma informação é compartilhada com terceiros ou usada para treinar modelos de IA.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Isso realmente funciona?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Não vamos prometer que seu ROI vai subir. Poker tem variância e resultado depende de muitos fatores. O que o Playbook faz é te dar sistema, dados e insights pra construir uma base mental sólida. O impacto no resultado é consequência de jogar com melhor preparo — consistentemente, não por sorte.
             </div>
           </div>
         </div>
@@ -499,13 +498,13 @@ const faqSchema = {
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
         <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">
-          Pronto para jogar seu melhor poker?
+          Construa a base mental que sua carreira precisa.
         </h2>
         <p class="section-subtitle" style="margin: 0 auto 2rem;">
-          Junte-se aos grinders que já transformaram performance em rotina. Grátis, sem burocracia, em 2 minutos.
+          Grátis, sem cartão, em 2 minutos. O único investimento é anotar como foi seu dia.
         </p>
         <a href="https://app.pokerplaybook.pro" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem; position: relative;">
-          Começar agora — é grátis →
+          Começar agora →
         </a>
       </div>
     </div>
