@@ -10,7 +10,15 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'O Poker Playbook é gratuito?',
+      name: 'O que é o Poker Playbook?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Um sistema completo de performance para jogadores profissionais de poker. Combina check-in diário, AI Coach com Claude Opus 4, sistema de Maestria com XP, e analytics detalhado dos 4 Pilares (Corpo, Mente, Ofício, Sistema).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'O app é gratuito?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'O plano Grind é 100% gratuito — sem período de teste, sem cartão de crédito. Inclui check-in diário, score, rotina, mindset e recordes. Para AI Coach, analytics avançado e checklist personalizado, existem os planos Pro (R$29/mês) e Elite (R$58/mês). Todos os planos pagos têm desconto de 25% no plano anual.'
@@ -21,7 +29,7 @@ const faqSchema = {
       name: 'Como funciona o AI Coach?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'O AI Coach é alimentado pelo Claude Opus e analisa seus dados semanais — volume de torneios, exercício, sono, estudo, sentimentos — gerando relatórios personalizados com base nos frameworks de Jared Tendler, Tommy Angelo e ciência da performance.'
+        text: 'O AI Coach é alimentado pelo Claude Opus (IA de ponta da Anthropic) e analisa seus dados de check-in — volume de torneios, exercício, sono, estudo, sentimentos durante o grind. Ele gera 5 tipos de relatório (semanal, mensal, anual, completo e padrões emocionais) usando frameworks de Jared Tendler, Tommy Angelo, periodização esportiva e prática deliberada.'
       }
     },
     {
@@ -29,7 +37,15 @@ const faqSchema = {
       name: 'O que são os 4 Pilares?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'São as 4 dimensões que compõem a performance no poker: Corpo (exercício, sono, respiração), Mente (gratidão, awareness emocional), Ofício (volume de grind e estudo) e Sistema (consistência e disciplina). Cada pilar recebe um score semanal.'
+        text: 'São as 4 dimensões que compõem a performance profissional no poker: Corpo (exercício, sono, respiração), Mente (gratidão, awareness emocional), Ofício (volume de grind e horas de estudo) e Sistema (consistência e dias perfeitos). Cada pilar recebe um score de 0 a 10 no seu relatório semanal.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'O que é o Agente Cientista?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Uma funcionalidade exclusiva do plano Elite que analisa seus dados e propõe hipóteses sobre o que melhora sua performance. Você aprova as hipóteses, o agente testa com seus dados reais, e o conhecimento confirmado alimenta suas futuras análises.'
       }
     },
     {
@@ -42,14 +58,6 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Meus dados são privados?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados para gerar análises, mas nenhuma informação é compartilhada com terceiros.'
-      }
-    },
-    {
-      '@type': 'Question',
       name: 'Isso realmente funciona?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -58,10 +66,34 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Meus dados são privados?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados exclusivamente para gerar suas análises pessoais. Nenhuma informação é compartilhada com terceiros ou usada para treinar modelos de IA.'
+      }
+    },
+    {
+      '@type': 'Question',
       name: 'Posso usar no celular?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sim. O Poker Playbook é uma aplicação web responsiva que funciona em qualquer navegador — desktop, tablet ou celular. Não precisa baixar nada.'
+        text: 'Sim. O Poker Playbook é uma aplicação web responsiva otimizada para funcionar em qualquer navegador — desktop, tablet ou celular. Não precisa baixar nenhum app. Basta acessar app.pokerplaybook.pro e fazer login.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Preciso de experiência para usar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. O onboarding configura tudo em 5 passos simples: suas metas, agenda semanal, rotina e objetivos. O app guia você no dia a dia com check-in, checklist e gratidões.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Posso cancelar a qualquer momento?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. O cancelamento é instantâneo pelo portal de pagamento Stripe. Sem multa, sem fidelidade, sem burocracia. Seu plano continua ativo até o final do período pago.'
       }
     }
   ]
@@ -409,7 +441,19 @@ const faqSchema = {
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            O Poker Playbook é gratuito?
+            O que é o Poker Playbook?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Um sistema completo de performance para jogadores profissionais de poker. Combina check-in diário, AI Coach com Claude Opus 4, sistema de Maestria com XP, e analytics detalhado dos 4 Pilares (Corpo, Mente, Ofício, Sistema).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            O app é gratuito?
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
@@ -438,7 +482,19 @@ const faqSchema = {
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              São as 4 dimensões que compõem a performance profissional no poker: <strong>Corpo</strong> (exercício, sono, respiração), <strong>Mente</strong> (gratidão, awareness emocional), <strong>Ofício</strong> (volume de grind e horas de estudo) e <strong>Sistema</strong> (consistência e dias perfeitos). Cada pilar recebe um score de 0 a 10 no seu relatório semanal.
+              São as 4 dimensões que compõem a performance profissional no poker: Corpo (exercício, sono, respiração), Mente (gratidão, awareness emocional), Ofício (volume de grind e horas de estudo) e Sistema (consistência e dias perfeitos). Cada pilar recebe um score de 0 a 10 no seu relatório semanal.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            O que é o Agente Cientista?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Uma funcionalidade exclusiva do plano Elite que analisa seus dados e propõe hipóteses sobre o que melhora sua performance. Você aprova as hipóteses, o agente testa com seus dados reais, e o conhecimento confirmado alimenta suas futuras análises.
             </div>
           </div>
         </div>
@@ -457,18 +513,6 @@ const faqSchema = {
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Meus dados são privados?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados exclusivamente para gerar suas análises pessoais. Nenhuma informação é compartilhada com terceiros ou usada para treinar modelos de IA.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
             Isso realmente funciona?
             <span class="icon">+</span>
           </button>
@@ -481,12 +525,48 @@ const faqSchema = {
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
+            Meus dados são privados?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. Seus dados ficam no seu perfil e só você tem acesso. O AI Coach processa seus dados exclusivamente para gerar suas análises pessoais. Nenhuma informação é compartilhada com terceiros ou usada para treinar modelos de IA.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             Posso usar no celular?
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
               Sim. O Poker Playbook é uma aplicação web responsiva otimizada para funcionar em qualquer navegador — desktop, tablet ou celular. Não precisa baixar nenhum app. Basta acessar app.pokerplaybook.pro e fazer login.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Preciso de experiência para usar?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Não. O onboarding configura tudo em 5 passos simples: suas metas, agenda semanal, rotina e objetivos. O app guia você no dia a dia com check-in, checklist e gratidões.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Posso cancelar a qualquer momento?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. O cancelamento é instantâneo pelo portal de pagamento Stripe. Sem multa, sem fidelidade, sem burocracia. Seu plano continua ativo até o final do período pago.
             </div>
           </div>
         </div>

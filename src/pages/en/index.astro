@@ -10,10 +10,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Poker Playbook free?',
+      name: 'What is Poker Playbook?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Grind plan is 100% free and includes daily check-in, score, routine, mindset and records. Pro ($29/mo) and Elite ($58/mo) plans unlock AI Coach, advanced analytics, custom checklist and more.'
+        text: 'A complete performance system for professional poker players. Combines daily check-in, AI Coach with Claude Opus 4, Mastery system with XP, and detailed analytics of the 4 Pillars (Body, Mind, Craft, System).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the app free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Grind plan is 100% free — no trial period, no credit card required. It includes daily check-in, score, routine, mindset and records. For AI Coach, advanced analytics and custom checklist, there are Pro (R$29/mo) and Elite (R$58/mo) plans. All paid plans have a 25% discount on the annual plan.'
       }
     },
     {
@@ -21,7 +29,7 @@ const faqSchema = {
       name: 'How does the AI Coach work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The AI Coach is powered by Claude Opus and analyzes your weekly data — tournament volume, exercise, sleep, study, feelings — generating personalized reports based on Jared Tendler, Tommy Angelo and performance science frameworks.'
+        text: "The AI Coach is powered by Claude Opus (Anthropic's frontier AI) and analyzes your check-in data — tournament volume, exercise, sleep, study, feelings during the grind. It generates 5 report types (weekly, monthly, yearly, complete and emotional patterns) using frameworks from Jared Tendler, Tommy Angelo, sports periodization and deliberate practice."
       }
     },
     {
@@ -29,7 +37,15 @@ const faqSchema = {
       name: 'What are the 4 Pillars?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The 4 dimensions of poker performance: Body (exercise, sleep, breathing), Mind (gratitude, emotional awareness), Craft (grind volume and study) and System (consistency and discipline). Each pillar gets a weekly score.'
+        text: 'The 4 dimensions of professional poker performance: Body (exercise, sleep, breathing), Mind (gratitude, emotional awareness), Craft (grind volume and study hours) and System (consistency and perfect days). Each pillar gets a 0-10 score in your weekly report.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the Scientist Agent?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An exclusive Elite plan feature that analyzes your data and proposes hypotheses about what improves your performance. You approve the hypotheses, the agent tests with your real data, and confirmed knowledge feeds your future analyses.'
       }
     },
     {
@@ -42,14 +58,6 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is my data private?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties.'
-      }
-    },
-    {
-      '@type': 'Question',
       name: 'Does this actually work?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -58,10 +66,34 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Is my data private?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties or used to train AI models.'
+      }
+    },
+    {
+      '@type': 'Question',
       name: 'Can I use it on mobile?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Poker Playbook is a responsive web app optimized for any browser — desktop, tablet or mobile. No download needed.'
+        text: 'Yes. Poker Playbook is a responsive web app optimized for any browser — desktop, tablet or mobile. No app download needed. Just go to app.pokerplaybook.pro and sign in.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need experience to use it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. The onboarding sets everything up in 5 simple steps: your goals, weekly schedule, routine, and objectives. The app guides you daily with check-in, checklist, and gratitudes.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I cancel anytime?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Cancellation is instant via the Stripe payment portal. No penalty, no commitment, no hassle. Your plan stays active until the end of the paid period.'
       }
     }
   ]
@@ -406,7 +438,19 @@ const faqSchema = {
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Is Poker Playbook free?
+            What is Poker Playbook?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              A complete performance system for professional poker players. Combines daily check-in, AI Coach with Claude Opus 4, Mastery system with XP, and detailed analytics of the 4 Pillars (Body, Mind, Craft, System).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is the app free?
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
@@ -435,7 +479,19 @@ const faqSchema = {
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              The 4 dimensions of professional poker performance: <strong>Body</strong> (exercise, sleep, breathing), <strong>Mind</strong> (gratitude, emotional awareness), <strong>Craft</strong> (grind volume and study hours) and <strong>System</strong> (consistency and perfect days). Each pillar gets a 0-10 score in your weekly report.
+              The 4 dimensions of professional poker performance: Body (exercise, sleep, breathing), Mind (gratitude, emotional awareness), Craft (grind volume and study hours) and System (consistency and perfect days). Each pillar gets a 0-10 score in your weekly report.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the Scientist Agent?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              An exclusive Elite plan feature that analyzes your data and proposes hypotheses about what improves your performance. You approve the hypotheses, the agent tests with your real data, and confirmed knowledge feeds your future analyses.
             </div>
           </div>
         </div>
@@ -454,18 +510,6 @@ const faqSchema = {
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Is my data private?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties or used to train AI models.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
             Does this actually work?
             <span class="icon">+</span>
           </button>
@@ -478,12 +522,48 @@ const faqSchema = {
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
+            Is my data private?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Your data stays in your profile and only you have access. The AI Coach processes your data exclusively to generate your personal analyses. No information is shared with third parties or used to train AI models.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             Can I use it on mobile?
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
               Yes. Poker Playbook is a responsive web app optimized for any browser — desktop, tablet or mobile. No app download needed. Just go to app.pokerplaybook.pro and sign in.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I need experience to use it?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No. The onboarding sets everything up in 5 simple steps: your goals, weekly schedule, routine, and objectives. The app guides you daily with check-in, checklist, and gratitudes.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I cancel anytime?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Cancellation is instant via the Stripe payment portal. No penalty, no commitment, no hassle. Your plan stays active until the end of the paid period.
             </div>
           </div>
         </div>
