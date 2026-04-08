@@ -126,7 +126,7 @@ Para o Search Console:
 
 ## OG Image
 
-Crie uma imagem `og-image.png` (1200x630px) e coloque em `public/`. Sugestão:
+Crie uma imagem `og-default.png` (1200x630px) e coloque em `public/`. Sugestão:
 - Fundo escuro (#0a0f0d)
 - Logo ♠ em verde (#10b981)
 - Texto: "Poker Playbook — Performance Profissional para Torneios MTT"

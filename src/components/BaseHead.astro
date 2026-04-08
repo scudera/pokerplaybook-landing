@@ -9,7 +9,7 @@ interface Props {
 const {
   title,
   description,
-  image = '/og-image.png',
+  image = '/og-default.png',
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
@@ -88,6 +88,8 @@ const orgJsonLd = {
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!-- Locale -->
 <meta property="og:locale" content={isEn ? 'en_US' : 'pt_BR'} />
