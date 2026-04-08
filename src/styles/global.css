@@ -158,8 +158,9 @@ img {
 }
 
 .nav-logo .spade {
-  color: #DEB571;
-  font-size: 1.3rem;
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .nav-links {
