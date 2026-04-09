@@ -198,9 +198,7 @@ const faqSchema = {
         </p>
       </div>
 
-      <div class="screenshot-placeholder animate-on-scroll" role="img" aria-label="Screenshot do check-in diário do Poker Playbook">
-        <span>📱 Screenshot do check-in — em breve</span>
-      </div>
+      <img src="/checkin-screenshot.png" alt="Screenshot do check-in diário do Poker Playbook" class="screenshot-img animate-on-scroll" loading="lazy" width="991" height="660" />
 
       <p class="section-hook animate-on-scroll">Ok, mas anotar é fácil. O difícil é transformar anotação em insight.</p>
     </div>
@@ -278,9 +276,7 @@ const faqSchema = {
         </div>
       </div>
 
-      <div class="screenshot-placeholder screenshot-landscape animate-on-scroll" role="img" aria-label="Screenshot do relatório semanal do AI Coach">
-        <span>📊 Relatório do Coach — em breve</span>
-      </div>
+      <img src="/coach-screenshot.png" alt="Screenshot do relatório semanal do AI Coach" class="screenshot-img screenshot-portrait animate-on-scroll" loading="lazy" width="644" height="837" />
 
       <p class="section-hook animate-on-scroll">E se a IA não apenas analisasse, mas propusesse hipóteses sobre o que melhora SUA performance?</p>
     </div>
@@ -691,7 +687,20 @@ const faqSchema = {
       margin: 0;
     }
 
-    /* Screenshot placeholders */
+    /* Real screenshots */
+    .screenshot-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 2rem auto;
+      display: block;
+    }
+    .screenshot-portrait {
+      max-width: 450px;
+    }
+
+    /* Screenshot placeholders (kept for fallback / future sections) */
     .screenshot-placeholder {
       max-width: 500px;
       margin: 2rem auto;

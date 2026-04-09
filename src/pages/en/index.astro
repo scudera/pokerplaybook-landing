@@ -197,9 +197,7 @@ const faqSchema = {
         </p>
       </div>
 
-      <div class="screenshot-placeholder animate-on-scroll" role="img" aria-label="Poker Playbook daily check-in screenshot">
-        <span>📱 Check-in screenshot — coming soon</span>
-      </div>
+      <img src="/checkin-screenshot.png" alt="Poker Playbook daily check-in screenshot" class="screenshot-img animate-on-scroll" loading="lazy" width="991" height="660" />
 
       <p class="section-hook animate-on-scroll">Logging is easy. The hard part is turning notes into insight.</p>
     </div>
@@ -277,9 +275,7 @@ const faqSchema = {
         </div>
       </div>
 
-      <div class="screenshot-placeholder screenshot-landscape animate-on-scroll" role="img" aria-label="AI Coach weekly review screenshot">
-        <span>📊 Coach report — coming soon</span>
-      </div>
+      <img src="/coach-screenshot.png" alt="AI Coach weekly review screenshot" class="screenshot-img screenshot-portrait animate-on-scroll" loading="lazy" width="644" height="837" />
 
       <p class="section-hook animate-on-scroll">What if the AI didn't just analyze, but proposed hypotheses about what improves YOUR performance?</p>
     </div>
@@ -688,7 +684,20 @@ const faqSchema = {
       margin: 0;
     }
 
-    /* Screenshot placeholders */
+    /* Real screenshots */
+    .screenshot-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 2rem auto;
+      display: block;
+    }
+    .screenshot-portrait {
+      max-width: 450px;
+    }
+
+    /* Screenshot placeholders (kept for fallback / future sections) */
     .screenshot-placeholder {
       max-width: 500px;
       margin: 2rem auto;
