@@ -110,10 +110,9 @@ const faqSchema = {
         <img src="/spade-logo.png" class="spade" alt="Poker Playbook" width="20" height="20" /> Poker Playbook
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#problem">The Problem</a></li>
-        <li><a href="#pillars">4 Pillars</a></li>
+        <li><a href="#pain">The Problem</a></li>
+        <li><a href="#method">How It Works</a></li>
         <li><a href="#coach">AI Coach</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#pricing">Plans</a></li>
         <li><a href="https://blog.pokerplaybook.pro" target="_blank">Blog</a></li>
         <li><a href="/" class="lang-switch" title="Português">PT</a></li>
@@ -127,222 +126,255 @@ const faqSchema = {
   <section class="hero section" id="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          ♠ Start free — plans from R$29/month
-        </div>
-
         <h1>
-          You know how to play. But do you know <span class="gradient">how to prepare?</span>
+          You know how to play. But do you know <span class="gradient">why you tilted yesterday?</span>
         </h1>
 
         <p class="hero-sub">
-          Solvers don't fix tilt. Trackers don't measure sleep. Coaches aren't there every day. Poker Playbook is the first AI-powered mental performance platform, built by someone who lives MTT.
+          Solvers don't fix tilt. Trackers don't measure sleep. Coaches aren't there every day.<br />
+          There's a missing piece — and it's not technical.
         </p>
 
         <div class="hero-actions">
           <a href="https://app.pokerplaybook.pro" class="btn-primary">
             Start free →
           </a>
-          <a href="#how-it-works" class="btn-secondary">
-            How it works
+          <a href="#method" class="btn-secondary">
+            See how it works ↓
           </a>
         </div>
 
         <div class="hero-proof">
           <div class="hero-proof-item">
-            <span class="icon">✓</span> Free Grind plan
+            <span class="icon">✓</span> Free forever
           </div>
           <div class="hero-proof-item">
             <span class="icon">✓</span> No credit card
           </div>
           <div class="hero-proof-item">
-            <span class="icon">✓</span> 2-minute setup
+            <span class="icon">✓</span> 2 min/day
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== THE PROBLEM ========== -->
-  <section class="section" id="problem" style="background: var(--bg-secondary);">
+  <!-- ========== THE PAIN ========== -->
+  <section class="section" id="pain" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
         <span class="section-label" style="justify-content: center;">The problem</span>
-        <h2 class="section-title">The market gave you everything. Except this.</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">
-          There are solvers for every spot. Trackers for every session. Coaches for every leak. But for the mental side — what actually separates those who move up from those who stay stuck — there's no tool. No method to track. No data to measure. No system to evaluate. Just willpower — and willpower doesn't scale.
-        </p>
+        <h2 class="section-title">Sound familiar?</h2>
       </div>
+
+      <div class="pain-stack">
+        <div class="pain-card animate-on-scroll">
+          <div class="pain-emoji">🛏️</div>
+          <p>Slept 5 hours. Grinded 12 anyway. Lost 15 buy-ins and can't tell if it was variance or exhaustion.</p>
+        </div>
+        <div class="pain-card animate-on-scroll">
+          <div class="pain-emoji">🧠</div>
+          <p>Tilted on a Sunday Major bubble. Knew you were tilting. Kept playing. Then promised "never again" — for the third time this month.</p>
+        </div>
+        <div class="pain-card animate-on-scroll">
+          <div class="pain-emoji">📊</div>
+          <p>You have a tracker, solver, coach. But when it comes to understanding why one week was great and another was a disaster... you open a blank spreadsheet and give up.</p>
+        </div>
+      </div>
+
+      <p class="section-hook animate-on-scroll">The difference between reacting and having a method fits in 2 minutes a day.</p>
     </div>
   </section>
 
-  <!-- ========== 4 PILLARS ========== -->
-  <section class="section" id="pillars">
+  <!-- ========== METHOD ========== -->
+  <section class="section" id="method">
     <div class="container">
-      <div class="animate-on-scroll">
-        <span class="section-label">The 4 Pillars</span>
-        <h2 class="section-title">4 dimensions. 1 system.</h2>
-        <p class="section-subtitle">
-          You already know tilt costs buy-ins and bad sleep kills decisions. Poker Playbook turns that into data and routine.
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">The method</span>
+        <h2 class="section-title">2 minutes. Every day. The AI does the rest.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Daily check-in: how you slept, if you trained, how many tournaments you played, how you felt. That simple.
         </p>
       </div>
 
-      <div class="pillars-grid">
-        <a href="/en/body/" class="pillar-card animate-on-scroll" data-pillar="corpo">
-          <div class="pillar-icon">💪</div>
-          <h3>Body <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
-          <p>Sleep, exercise, wake time and breathing. When the body fails, your A-game disappears. The app tracks this daily — so you stop guessing and start knowing.</p>
-          <div class="pillar-metrics">
-            <span class="pillar-metric">Exercise</span>
-            <span class="pillar-metric">Sleep</span>
-            <span class="pillar-metric">Wake-up</span>
-            <span class="pillar-metric">Breathing</span>
-          </div>
-        </a>
-
-        <a href="/en/mind/" class="pillar-card animate-on-scroll" data-pillar="mente">
-          <div class="pillar-icon">🧠</div>
-          <h3>Mind <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
-          <p>Gratitude, emotional awareness, tilt control. It's not about "being positive" — it's about identifying patterns before they cost you money.</p>
-          <div class="pillar-metrics">
-            <span class="pillar-metric">Gratitude</span>
-            <span class="pillar-metric">Feelings</span>
-            <span class="pillar-metric">A/B/C Game</span>
-          </div>
-        </a>
-
-        <a href="/en/craft/" class="pillar-card animate-on-scroll" data-pillar="oficio">
-          <div class="pillar-icon">🎯</div>
-          <h3>Craft <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
-          <p>Volume and deliberate study. The app measures whether you're executing what you planned — no fooling yourself.</p>
-          <div class="pillar-metrics">
-            <span class="pillar-metric">Tournaments</span>
-            <span class="pillar-metric">Study (h)</span>
-            <span class="pillar-metric">Deliberate practice</span>
-          </div>
-        </a>
-
-        <a href="/en/system/" class="pillar-card animate-on-scroll" data-pillar="sistema">
-          <div class="pillar-icon">⚡</div>
-          <h3>System <span style="font-size:0.75rem;color:var(--text-muted);">→</span></h3>
-          <p>Consistency beats talent. Perfect days, streaks, routine adherence. The Playbook shows whether you're building habits or just reacting.</p>
-          <div class="pillar-metrics">
-            <span class="pillar-metric">Perfect days</span>
-            <span class="pillar-metric">Streak</span>
-            <span class="pillar-metric">Adherence</span>
-          </div>
-        </a>
+      <div class="screenshot-placeholder animate-on-scroll" role="img" aria-label="Poker Playbook daily check-in screenshot">
+        <span>📱 Check-in screenshot — coming soon</span>
       </div>
+
+      <p class="section-hook animate-on-scroll">Logging is easy. The hard part is turning notes into insight.</p>
+    </div>
+  </section>
+
+  <!-- ========== PATTERNS ========== -->
+  <section class="section" id="patterns" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Patterns</span>
+        <h2 class="section-title">The AI cross-references your data and finds what you can't see.</h2>
+      </div>
+
+      <div class="pattern-grid">
+        <div class="pattern-card animate-on-scroll">
+          <div class="pattern-icon">🛏️→📉</div>
+          <h3>Sleep vs. Volume</h3>
+          <p>The system discovers if your bad nights are connected to volume drops and increased negative feelings.</p>
+        </div>
+        <div class="pattern-card animate-on-scroll">
+          <div class="pattern-icon">💪→🧠</div>
+          <h3>Exercise vs. A-Game</h3>
+          <p>Do you play better on training days? The Playbook tests this with your real data.</p>
+        </div>
+        <div class="pattern-card animate-on-scroll">
+          <div class="pattern-icon">📅→🔥</div>
+          <h3>Consistency vs. Results</h3>
+          <p>How many consecutive perfect days do you need for a positive week? The data answers.</p>
+        </div>
+      </div>
+
+      <p class="section-hook animate-on-scroll">Who runs this analysis every week, without fail, without bias?</p>
     </div>
   </section>
 
   <!-- ========== AI COACH ========== -->
   <section class="section coach-section" id="coach">
     <div class="container">
-      <div class="animate-on-scroll">
-        <span class="section-label">AI Coach</span>
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">AI Coach</span>
         <h2 class="section-title">A coach that knows your data, not your excuses.</h2>
-        <p class="section-subtitle">
-          Claude Opus analyzes your check-ins and cross-references sleep with volume, exercise with tilt, routine with results. Every week, a report no human coach has time to build.
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Claude Opus analyzes your check-ins and cross-references sleep with volume, exercise with tilt, routine with results. Every week, a report no human coach has time to create.
         </p>
       </div>
 
-      <div class="coach-grid">
-        <div class="coach-features animate-on-scroll">
-          <div class="coach-feature">
-            <div class="coach-feature-icon">📊</div>
-            <div>
-              <h4>Weekly Review</h4>
-              <p>4 Pillar scores, what worked, what didn't, and what to do next week. Straight to the point.</p>
-            </div>
-          </div>
-          <div class="coach-feature">
-            <div class="coach-feature-icon">📈</div>
-            <div>
-              <h4>Monthly & Yearly Review</h4>
-              <p>Long-term patterns you can't see day to day. Real evolution backed by data, not feelings.</p>
-            </div>
-          </div>
-          <div class="coach-feature">
-            <div class="coach-feature-icon">🔬</div>
-            <div>
-              <h4>Emotional Patterns</h4>
-              <p>When do you tilt most? After bad sleep? On days without exercise? The AI finds your triggers in your data.</p>
-            </div>
-          </div>
-          <div class="coach-feature">
-            <div class="coach-feature-icon">📚</div>
-            <div>
-              <h4>Scientific Frameworks</h4>
-              <p>Frameworks from Jared Tendler, Tommy Angelo, Yerkes-Dodson, deliberate practice and periodization — automatically applied to your data.</p>
-            </div>
+      <div class="coach-feature-grid">
+        <div class="coach-feature animate-on-scroll">
+          <div class="coach-feature-icon">📊</div>
+          <div>
+            <h4>Weekly Review</h4>
+            <p>4-Pillar score, what worked, what didn't.</p>
           </div>
         </div>
-
-        <div class="coach-preview animate-on-scroll">
-          <div class="coach-preview-header">
-            <div class="coach-avatar">♠</div>
-            <div>
-              <div class="coach-preview-name">Playbook Coach</div>
-              <div class="coach-preview-label">Claude Opus · Weekly Review</div>
-            </div>
+        <div class="coach-feature animate-on-scroll">
+          <div class="coach-feature-icon">📈</div>
+          <div>
+            <h4>Monthly & Yearly</h4>
+            <p>Long-term patterns with data, not gut feeling.</p>
           </div>
-          <div class="coach-bubble">
-            <strong>Solid week.</strong> 847 tournaments across 4 grind days — 80% adherence. Exercise dropped to 2/4 days, which may explain the sleep average dropping from 7.2h to 6.5h...
+        </div>
+        <div class="coach-feature animate-on-scroll">
+          <div class="coach-feature-icon">🔬</div>
+          <div>
+            <h4>Emotional Patterns</h4>
+            <p>When do you tilt most? The AI finds the triggers.</p>
           </div>
-          <div class="coach-bubble">
-            I recommend focusing on the <strong>Body Pillar</strong> this week. Tommy Angelo would say: before chasing more volume, make sure your C-game is being eliminated through consistent sleep and exercise.
-          </div>
-          <div class="coach-scorecard">
-            <div class="coach-score">
-              <div class="coach-score-value" style="color: var(--pillar-corpo)">7.2</div>
-              <div class="coach-score-label">Body</div>
-            </div>
-            <div class="coach-score">
-              <div class="coach-score-value" style="color: var(--pillar-mente)">8.5</div>
-              <div class="coach-score-label">Mind</div>
-            </div>
-            <div class="coach-score">
-              <div class="coach-score-value" style="color: var(--pillar-oficio)">8.0</div>
-              <div class="coach-score-label">Craft</div>
-            </div>
-            <div class="coach-score">
-              <div class="coach-score-value" style="color: var(--pillar-sistema)">7.8</div>
-              <div class="coach-score-label">System</div>
-            </div>
+        </div>
+        <div class="coach-feature animate-on-scroll">
+          <div class="coach-feature-icon">📚</div>
+          <div>
+            <h4>Science Frameworks</h4>
+            <p>Tendler, Angelo, Yerkes-Dodson, deliberate practice.</p>
           </div>
         </div>
       </div>
+
+      <div class="screenshot-placeholder screenshot-landscape animate-on-scroll" role="img" aria-label="AI Coach weekly review screenshot">
+        <span>📊 Coach report — coming soon</span>
+      </div>
+
+      <p class="section-hook animate-on-scroll">What if the AI didn't just analyze, but proposed hypotheses about what improves YOUR performance?</p>
     </div>
   </section>
 
-  <!-- ========== HOW IT WORKS ========== -->
-  <section class="section" id="how-it-works" style="background: var(--bg-secondary);">
+  <!-- ========== RESEARCH AGENT ========== -->
+  <section class="section" id="scientist" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="animate-on-scroll" style="text-align: center;">
-        <span class="section-label" style="justify-content: center;">How it works</span>
-        <h2 class="section-title">2 minutes a day. The AI does the rest.</h2>
+        <span class="section-label" style="justify-content: center;">Scientist</span>
+        <h2 class="section-title">
+          The Research Agent. <span class="badge-elite">Elite only</span>
+        </h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          The AI analyzes your data, spots anomalies and proposes hypotheses: "Does morning exercise improve your afternoon volume?" You approve. It collects data. Tests. And turns the result into permanent knowledge about you.
+        </p>
       </div>
 
-      <div class="steps">
-        <div class="step animate-on-scroll">
-          <div class="step-number">1</div>
-          <h3>Daily check-in</h3>
-          <p>Log tournaments, sleep, exercise, study and how you felt. Under 2 minutes.</p>
+      <div class="cientista-flow animate-on-scroll">
+        <div class="cientista-step">
+          <div class="cientista-step-icon">🔍</div>
+          <div class="cientista-step-label">Spots pattern</div>
         </div>
-
-        <div class="step animate-on-scroll">
-          <div class="step-number">2</div>
-          <h3>The AI Coach connects the dots</h3>
-          <p>The AI Coach cross-references your data and finds patterns: bad sleep → more tilt? No exercise → less volume? The numbers answer.</p>
+        <div class="cientista-arrow">→</div>
+        <div class="cientista-step">
+          <div class="cientista-step-icon">🧪</div>
+          <div class="cientista-step-label">Proposes hypothesis</div>
         </div>
-
-        <div class="step animate-on-scroll">
-          <div class="step-number">3</div>
-          <h3>Build your mental foundation</h3>
-          <p>Week by week, you stop reacting and start having a method. Routine becomes habit. Habit becomes performance.</p>
+        <div class="cientista-arrow">→</div>
+        <div class="cientista-step">
+          <div class="cientista-step-icon">✅</div>
+          <div class="cientista-step-label">Confirms or refutes</div>
         </div>
       </div>
+
+      <p class="cientista-stats animate-on-scroll">
+        <span data-stat-inline="hypotheses">17</span> hypotheses created ·
+        <span data-stat-inline="testing">3</span> being tested now
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CREDIBILITY ========== -->
+  <section class="section" id="credibility">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <span class="section-label" style="justify-content: center;">Credibility</span>
+        <h2 class="section-title">Built by someone who lives the grind.</h2>
+      </div>
+
+      <blockquote class="founder-quote animate-on-scroll">
+        "Created by a professional MTT player who uses the system every day. This isn't theory — it's the method I use to prepare before every session."
+      </blockquote>
+
+      <div class="stats-grid animate-on-scroll">
+        <div class="stat-item">
+          <span class="stat-number" data-stat="checkins">98</span><span class="stat-plus">+</span>
+          <span class="stat-label">check-ins logged</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-stat="ai-reviews">9</span>
+          <span class="stat-label">AI reports generated</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-stat="hypotheses">17</span>
+          <span class="stat-label">scientific hypotheses</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-stat="active-since">Jan 2026</span>
+          <span class="stat-label">active since</span>
+        </div>
+      </div>
+
+      <div class="frameworks-list animate-on-scroll">
+        <span class="frameworks-label">Based on:</span>
+        <span class="framework-badge">Jared Tendler — The Mental Game of Poker</span>
+        <span class="framework-badge">Tommy Angelo — Elements of Poker</span>
+        <span class="framework-badge">Sports Periodization</span>
+        <span class="framework-badge">Deliberate Practice (Ericsson)</span>
+        <span class="framework-badge">Yerkes-Dodson</span>
+      </div>
+
+      <p class="tech-stack animate-on-scroll">
+        Powered by: Claude Opus (Anthropic) · Stripe · Supabase
+      </p>
+
+      <p class="pillar-links-inline animate-on-scroll">
+        Explore the 4 Pillars in detail →
+        <a href="/en/body/">Body</a> ·
+        <a href="/en/mind/">Mind</a> ·
+        <a href="/en/craft/">Craft</a> ·
+        <a href="/en/system/">System</a>
+      </p>
+
+      <!-- TESTIMONIALS: add here when available -->
     </div>
   </section>
 
@@ -353,7 +385,7 @@ const faqSchema = {
         <span class="section-label" style="justify-content: center;">Plans</span>
         <h2 class="section-title">Start free. Upgrade when it makes sense.</h2>
         <p class="section-subtitle" style="margin: 0 auto;">
-          No time limit on the free plan. When you want deeper data and AI, the paid plans are there.
+          No time limit on the free plan. No surprises.
         </p>
         <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Prices in BRL (Brazilian Real) · ~$5/mo Pro · ~$10/mo Elite</p>
       </div>
@@ -420,6 +452,14 @@ const faqSchema = {
             Subscribe Elite
           </a>
         </div>
+      </div>
+
+      <div class="trust-badges animate-on-scroll">
+        <span>🔒 Secure payment via Stripe</span>
+        <span class="trust-sep">·</span>
+        <span>↩️ Cancel in 1 click, no penalty</span>
+        <span class="trust-sep">·</span>
+        <span>🛡️ Your data is 100% private</span>
       </div>
     </div>
   </section>
@@ -600,10 +640,347 @@ const faqSchema = {
     </div>
   </footer>
 
+  <!-- ========== STICKY CTA (mobile) ========== -->
+  <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+    <a href="https://app.pokerplaybook.pro" class="btn-primary sticky-btn">
+      Start free →
+    </a>
+  </div>
+
+  <!-- ========== NEW v2 STYLES ========== -->
+  <style>
+    .section-hook {
+      text-align: center;
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-style: italic;
+      margin: 2.5rem auto 0;
+      max-width: 600px;
+      padding: 1rem 0;
+    }
+
+    /* PAIN — stacked cards */
+    .pain-stack {
+      max-width: 700px;
+      margin: 2.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pain-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+    .pain-emoji {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .pain-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Screenshot placeholders */
+    .screenshot-placeholder {
+      max-width: 500px;
+      margin: 2rem auto;
+      aspect-ratio: 9 / 16;
+      max-height: 500px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 2px dashed var(--accent-glow-strong);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .screenshot-landscape {
+      aspect-ratio: 16 / 9;
+      max-height: 400px;
+      max-width: 700px;
+    }
+
+    /* PATTERNS — 3-card grid */
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2.5rem auto 0;
+    }
+    @media (max-width: 768px) {
+      .pattern-grid { grid-template-columns: 1fr; }
+    }
+    .pattern-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .pattern-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .pattern-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .pattern-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* COACH — 2x2 feature grid */
+    .coach-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+    }
+    @media (max-width: 768px) {
+      .coach-feature-grid { grid-template-columns: 1fr; }
+    }
+    .coach-feature-grid .coach-feature {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .coach-feature-grid .coach-feature-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .coach-feature-grid .coach-feature h4 {
+      font-size: 1rem;
+      margin: 0 0 0.35rem;
+      color: var(--text-primary);
+    }
+    .coach-feature-grid .coach-feature p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* SCIENTIST */
+    .badge-elite {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25em 0.6em;
+      border-radius: 999px;
+      background: var(--accent-glow-strong);
+      color: var(--accent-light);
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .cientista-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 2.5rem auto 1rem;
+    }
+    .cientista-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      min-width: 110px;
+      padding: 1rem 0.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+    .cientista-step-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+    .cientista-step-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    .cientista-arrow {
+      font-size: 1.5rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    @media (max-width: 600px) {
+      .cientista-arrow { transform: rotate(90deg); }
+    }
+    .cientista-stats {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin: 1rem auto 0;
+    }
+
+    /* CREDIBILITY */
+    .founder-quote {
+      max-width: 700px;
+      margin: 2rem auto 2.5rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-card);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 2.5rem auto;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      line-height: 1.1;
+    }
+    .stat-plus {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 0.25rem;
+    }
+    .frameworks-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      max-width: 800px;
+      margin: 2rem auto 1.5rem;
+    }
+    .frameworks-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+    .framework-badge {
+      display: inline-block;
+      padding: 0.4em 0.85em;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+    }
+    .tech-stack {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin: 1rem auto 1.5rem;
+    }
+    .pillar-links-inline {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 1.5rem auto 0;
+    }
+    .pillar-links-inline a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pillar-links-inline a:hover {
+      color: var(--accent-light);
+      text-decoration: underline;
+    }
+
+    /* PRICING — trust badges below cards */
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 2.5rem auto 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      max-width: 800px;
+      text-align: center;
+    }
+    .trust-sep {
+      color: var(--border);
+    }
+
+    /* STICKY CTA (mobile only) */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 16px;
+      background: rgba(10, 14, 23, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-top: 1px solid var(--accent-glow-strong);
+      z-index: 1000;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+    .sticky-btn {
+      width: 100%;
+      max-width: 400px;
+      display: inline-block;
+    }
+    @media (min-width: 769px) {
+      .sticky-cta { display: none !important; }
+    }
+    @media (max-width: 768px) {
+      .cta-section { padding-bottom: calc(var(--section-py) + 80px); }
+    }
+  </style>
+
   <script is:inline>
     document.getElementById('nav-toggle')?.addEventListener('click', () => {
       document.getElementById('nav-links')?.classList.toggle('open');
     });
+
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
@@ -613,6 +990,7 @@ const faqSchema = {
         btn.setAttribute('aria-expanded', !isOpen);
       });
     });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -622,10 +1000,100 @@ const faqSchema = {
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('nav-links')?.classList.remove('open');
       });
     });
+
+    // === Dynamic Stats ===
+    (function() {
+      const STATS_URL = 'https://jddvghohhcxuxfvtvjmb.supabase.co/functions/v1/public-stats';
+
+      function animateValue(el, end, duration) {
+        const start = 0;
+        const startTime = performance.now();
+        function update(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(start + (end - start) * eased);
+          if (progress < 1) requestAnimationFrame(update);
+          else { el.textContent = end; }
+        }
+        requestAnimationFrame(update);
+      }
+
+      async function loadStats() {
+        try {
+          const resp = await fetch(STATS_URL);
+          if (!resp.ok) return;
+          const stats = await resp.json();
+
+          const mapping = {
+            'checkins': stats.checkins,
+            'ai-reviews': stats.ai_reviews,
+            'hypotheses': stats.hypotheses_created,
+          };
+
+          const statObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const key = entry.target.dataset.stat;
+                if (mapping[key] !== undefined) {
+                  animateValue(entry.target, mapping[key], 1200);
+                }
+                statObs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.3 });
+
+          document.querySelectorAll('[data-stat]').forEach(el => {
+            const key = el.dataset.stat;
+            if (key === 'active-since' && stats.active_since) {
+              const date = new Date(stats.active_since + 'T00:00:00');
+              const isEn = window.location.pathname.startsWith('/en');
+              const months = isEn
+                ? ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                : ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+              el.textContent = months[date.getMonth()] + ' ' + date.getFullYear();
+            } else if (mapping[key] !== undefined) {
+              statObs.observe(el);
+            }
+          });
+
+          const hypEl = document.querySelector('[data-stat-inline="hypotheses"]');
+          if (hypEl) hypEl.textContent = stats.hypotheses_created;
+          const testEl = document.querySelector('[data-stat-inline="testing"]');
+          if (testEl) testEl.textContent = stats.hypotheses_testing;
+        } catch (e) {
+          // Silently keep static fallback values
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadStats);
+      } else {
+        loadStats();
+      }
+    })();
+
+    // === Sticky CTA (mobile only — appears after hero leaves viewport) ===
+    (function() {
+      const heroEl = document.getElementById('hero');
+      const stickyEl = document.getElementById('sticky-cta');
+      if (heroEl && stickyEl && window.innerWidth <= 768) {
+        const stickyObs = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            stickyEl.classList.remove('visible');
+            stickyEl.setAttribute('aria-hidden', 'true');
+          } else {
+            stickyEl.classList.add('visible');
+            stickyEl.setAttribute('aria-hidden', 'false');
+          }
+        }, { threshold: 0 });
+        stickyObs.observe(heroEl);
+      }
+    })();
   </script>
 </Layout>
