@@ -1,8 +1,6 @@
 ---
-// Standalone /en/bio — mesma estrutura do /bio PT, textos em inglês.
-const SUPABASE_URL = 'https://jddvghohhcxuxfvtvjmb.supabase.co/rest/v1/ig_posts?is_active=eq.true&order=published_at.desc&limit=3';
-const SUPABASE_KEY = 'sb_publishable_NKUx5Nj18ntkYJ4PC2LWCw_gvlW2Oda';
-const BLOG_BASE = 'https://blog.pokerplaybook.pro/en/blog/';
+// Standalone /en/bio — EN version. Consume RSS from the blog.
+const RSS_URL = 'https://blog.pokerplaybook.pro/en/rss.xml';
 const BLOG_FALLBACK = 'https://blog.pokerplaybook.pro/en/blog/';
 const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=bio&utm_campaign=app_cta';
 ---
@@ -13,14 +11,14 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, follow, noarchive" />
   <title>Link in Bio · Poker Playbook</title>
-  <meta name="description" content="Latest Instagram posts and full articles from the blog." />
+  <meta name="description" content="Latest articles from the blog — mental game, routine, and performance for MTT players." />
 
   <link rel="icon" type="image/png" href="/spade-logo.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Poker Playbook" />
   <meta property="og:title" content="Link in Bio · Poker Playbook" />
-  <meta property="og:description" content="Latest Instagram posts and full articles from the blog." />
+  <meta property="og:description" content="Latest articles from the blog — mental game, routine, and performance for MTT players." />
   <meta property="og:image" content="https://pokerplaybook.pro/og-default.png" />
   <meta property="og:url" content="https://pokerplaybook.pro/en/bio/" />
   <meta property="og:locale" content="en_US" />
@@ -89,7 +87,7 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
       background: #1e293b;
       border: 1px solid #334155;
       border-radius: 14px;
-      overflow: hidden;
+      padding: 1rem 1.1rem 1.15rem;
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       display: block;
     }
@@ -98,22 +96,30 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
       border-color: #DEB571;
       box-shadow: 0 8px 24px rgba(222, 181, 113, 0.12);
     }
-    .bio-card-cover {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      background: #0f172a;
+    .bio-card-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #DEB571;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.45rem;
     }
-    .bio-card-body { padding: 0.95rem 1rem 1.1rem; }
     .bio-card-title {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: #f1f5f9;
       line-height: 1.35;
       margin-bottom: 0.5rem;
     }
+    .bio-card-snippet {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 0.6rem;
+    }
     .bio-card-cta {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #DEB571;
     }
@@ -122,25 +128,20 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
       background: #1e293b;
       border: 1px solid #334155;
       border-radius: 14px;
-      overflow: hidden;
+      padding: 1rem 1.1rem 1.15rem;
     }
-    .bio-skeleton-cover {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(90deg, #1e293b 0%, #2a3a52 50%, #1e293b 100%);
-      background-size: 200% 100%;
-      animation: shimmer 1.6s infinite;
-    }
-    .bio-skeleton-body { padding: 0.95rem 1rem 1.1rem; }
     .bio-skeleton-line {
       height: 0.9rem;
       background: linear-gradient(90deg, #1e293b 0%, #2a3a52 50%, #1e293b 100%);
       background-size: 200% 100%;
       animation: shimmer 1.6s infinite;
       border-radius: 4px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
     }
-    .bio-skeleton-line:last-child { width: 40%; margin-bottom: 0; }
+    .bio-skeleton-line.short { width: 30%; }
+    .bio-skeleton-line.long { width: 95%; }
+    .bio-skeleton-line.medium { width: 70%; }
+    .bio-skeleton-line:last-child { margin-bottom: 0; width: 25%; }
     @keyframes shimmer {
       0% { background-position: 200% 0; }
       100% { background-position: -200% 0; }
@@ -202,11 +203,11 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
     </header>
 
     <section aria-labelledby="posts-title">
-      <h2 id="posts-title" class="bio-section-title">📸 Latest posts</h2>
+      <h2 id="posts-title" class="bio-section-title">Latest articles</h2>
       <div id="bio-posts" class="bio-posts">
-        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
-        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
-        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
+        <div class="bio-skeleton"><div class="bio-skeleton-line short"></div><div class="bio-skeleton-line long"></div><div class="bio-skeleton-line medium"></div><div class="bio-skeleton-line"></div></div>
+        <div class="bio-skeleton"><div class="bio-skeleton-line short"></div><div class="bio-skeleton-line long"></div><div class="bio-skeleton-line medium"></div><div class="bio-skeleton-line"></div></div>
+        <div class="bio-skeleton"><div class="bio-skeleton-line short"></div><div class="bio-skeleton-line long"></div><div class="bio-skeleton-line medium"></div><div class="bio-skeleton-line"></div></div>
       </div>
     </section>
 
@@ -217,10 +218,44 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
     </section>
   </main>
 
-  <script is:inline define:vars={{ SUPABASE_URL, SUPABASE_KEY, BLOG_BASE, BLOG_FALLBACK }}>
+  <script is:inline define:vars={{ RSS_URL, BLOG_FALLBACK }}>
     (function () {
       const container = document.getElementById('bio-posts');
       if (!container) return;
+
+      const MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+      function humanizeDate(d) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const postDay = new Date(d);
+        postDay.setHours(0, 0, 0, 0);
+        const dayDiff = Math.round((today - postDay) / 86400000);
+
+        if (dayDiff <= 0) return 'Today';
+        if (dayDiff === 1) return 'Yesterday';
+        if (dayDiff < 7) return dayDiff + ' days ago';
+        return MONTHS_EN[d.getMonth()] + ' ' + d.getDate();
+      }
+
+      function truncate(s, n) {
+        if (!s) return '';
+        const trimmed = s.trim();
+        if (trimmed.length <= n) return trimmed;
+        const cut = trimmed.substring(0, n);
+        const lastSpace = cut.lastIndexOf(' ');
+        return (lastSpace > n - 30 ? cut.substring(0, lastSpace) : cut) + '…';
+      }
+
+      function slugFromLink(href) {
+        try {
+          const u = new URL(href);
+          const parts = u.pathname.split('/').filter(Boolean);
+          return parts[parts.length - 1] || '';
+        } catch (e) {
+          return '';
+        }
+      }
 
       function renderEmpty() {
         container.innerHTML = '';
@@ -228,59 +263,72 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
         empty.className = 'bio-empty';
         const link = document.createElement('a');
         link.href = BLOG_FALLBACK;
-        link.textContent = 'See the latest articles on the blog →';
+        link.textContent = 'See all articles on the blog →';
         empty.appendChild(link);
         container.appendChild(empty);
       }
 
-      function buildCard(post) {
-        const slug = typeof post.article_slug === 'string' ? post.article_slug : '';
-        if (!slug) return null;
-        const title = (typeof post.article_title_en === 'string' && post.article_title_en.trim())
-          ? post.article_title_en.trim()
-          : (typeof post.article_title_pt === 'string' ? post.article_title_pt.trim() : '');
-        if (!title) return null;
-        const cover = typeof post.cover_url === 'string' ? post.cover_url : '';
-        const coverOk = /^https:\/\//.test(cover);
-        const keyword = typeof post.keyword === 'string' && post.keyword.trim() ? post.keyword.trim() : slug;
+      function buildCard(item) {
+        const titleEl = item.querySelector('title');
+        const linkEl = item.querySelector('link');
+        const descEl = item.querySelector('description');
+        const pubDateEl = item.querySelector('pubDate');
+
+        const title = titleEl ? titleEl.textContent.trim() : '';
+        const href = linkEl ? linkEl.textContent.trim() : '';
+        const desc = descEl ? descEl.textContent.trim() : '';
+        const pubDate = pubDateEl ? new Date(pubDateEl.textContent.trim()) : null;
+
+        if (!title || !href || !pubDate || isNaN(pubDate.getTime())) return null;
+        if (!/^https:\/\//.test(href)) return null;
+
+        const slug = slugFromLink(href);
+        const utmHref = href + (href.indexOf('?') === -1 ? '?' : '&')
+          + 'utm_source=instagram&utm_medium=bio&utm_campaign=' + encodeURIComponent(slug);
 
         const card = document.createElement('a');
         card.className = 'bio-card';
-        card.href = BLOG_BASE + encodeURIComponent(slug) + '/?utm_source=instagram&utm_medium=bio&utm_campaign=' + encodeURIComponent(keyword);
+        card.href = utmHref;
         card.rel = 'noopener';
 
-        if (coverOk) {
-          const img = document.createElement('img');
-          img.className = 'bio-card-cover';
-          img.loading = 'lazy';
-          img.decoding = 'async';
-          img.alt = '';
-          img.src = cover;
-          card.appendChild(img);
-        }
+        const dateEl = document.createElement('div');
+        dateEl.className = 'bio-card-date';
+        dateEl.textContent = humanizeDate(pubDate);
 
-        const body = document.createElement('div');
-        body.className = 'bio-card-body';
-        const h3 = document.createElement('div');
-        h3.className = 'bio-card-title';
-        h3.textContent = title;
+        const titleNode = document.createElement('div');
+        titleNode.className = 'bio-card-title';
+        titleNode.textContent = title;
+
+        const snippet = document.createElement('div');
+        snippet.className = 'bio-card-snippet';
+        snippet.textContent = truncate(desc, 140);
+
         const cta = document.createElement('div');
         cta.className = 'bio-card-cta';
         cta.textContent = 'Read article →';
-        body.appendChild(h3);
-        body.appendChild(cta);
-        card.appendChild(body);
+
+        card.appendChild(dateEl);
+        card.appendChild(titleNode);
+        if (snippet.textContent) card.appendChild(snippet);
+        card.appendChild(cta);
         return card;
       }
 
       async function load() {
         try {
-          const resp = await fetch(SUPABASE_URL, { headers: { apikey: SUPABASE_KEY } });
+          const resp = await fetch(RSS_URL, { cache: 'no-store' });
           if (!resp.ok) { renderEmpty(); return; }
-          const data = await resp.json();
-          if (!Array.isArray(data) || data.length === 0) { renderEmpty(); return; }
-          const cards = data.map(buildCard).filter(Boolean);
+          const text = await resp.text();
+          const doc = new DOMParser().parseFromString(text, 'application/xml');
+          const parseErr = doc.querySelector('parsererror');
+          if (parseErr) { renderEmpty(); return; }
+
+          const items = Array.from(doc.querySelectorAll('item')).slice(0, 3);
+          if (items.length === 0) { renderEmpty(); return; }
+
+          const cards = items.map(buildCard).filter(Boolean);
           if (cards.length === 0) { renderEmpty(); return; }
+
           container.innerHTML = '';
           cards.forEach(c => container.appendChild(c));
         } catch (e) {
