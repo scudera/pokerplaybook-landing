@@ -227,16 +227,15 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
       const MONTHS_PT = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 
       function humanizeDate(d) {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const postDay = new Date(d);
-        postDay.setHours(0, 0, 0, 0);
-        const dayDiff = Math.round((today - postDay) / 86400000);
+        const now = new Date();
+        const nowUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+        const postUtc = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+        const dayDiff = Math.floor((nowUtc - postUtc) / 86400000);
 
         if (dayDiff <= 0) return 'Hoje';
         if (dayDiff === 1) return 'Ontem';
         if (dayDiff < 7) return 'há ' + dayDiff + ' dias';
-        return d.getDate() + ' ' + MONTHS_PT[d.getMonth()];
+        return d.getUTCDate() + ' ' + MONTHS_PT[d.getUTCMonth()];
       }
 
       function truncate(s, n) {
