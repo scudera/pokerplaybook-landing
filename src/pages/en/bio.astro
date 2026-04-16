@@ -1,0 +1,299 @@
+---
+// Standalone /en/bio — mesma estrutura do /bio PT, textos em inglês.
+const SUPABASE_URL = 'https://jddvghohhcxuxfvtvjmb.supabase.co/rest/v1/ig_posts?is_active=eq.true&order=published_at.desc&limit=3';
+const SUPABASE_KEY = 'sb_publishable_NKUx5Nj18ntkYJ4PC2LWCw_gvlW2Oda';
+const BLOG_BASE = 'https://blog.pokerplaybook.pro/en/blog/';
+const BLOG_FALLBACK = 'https://blog.pokerplaybook.pro/en/blog/';
+const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=bio&utm_campaign=app_cta';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, follow, noarchive" />
+  <title>Link in Bio · Poker Playbook</title>
+  <meta name="description" content="Latest Instagram posts and full articles from the blog." />
+
+  <link rel="icon" type="image/png" href="/spade-logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Poker Playbook" />
+  <meta property="og:title" content="Link in Bio · Poker Playbook" />
+  <meta property="og:description" content="Latest Instagram posts and full articles from the blog." />
+  <meta property="og:image" content="https://pokerplaybook.pro/og-default.png" />
+  <meta property="og:url" content="https://pokerplaybook.pro/en/bio/" />
+  <meta property="og:locale" content="en_US" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRQS4R3GQ"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZRQS4R3GQ');
+  </script>
+
+  <style is:global>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      background: #0a0e17;
+      color: #f1f5f9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .bio-container {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .bio-header { text-align: center; padding-top: 1rem; }
+    .bio-logo {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 0.75rem;
+      filter: drop-shadow(0 0 12px rgba(222, 181, 113, 0.35));
+    }
+    .bio-brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #DEB571;
+      letter-spacing: -0.01em;
+    }
+    .bio-tagline {
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+
+    .bio-section-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.85rem;
+    }
+
+    .bio-posts { display: flex; flex-direction: column; gap: 0.85rem; }
+
+    .bio-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+    }
+    .bio-card:hover {
+      transform: translateY(-2px);
+      border-color: #DEB571;
+      box-shadow: 0 8px 24px rgba(222, 181, 113, 0.12);
+    }
+    .bio-card-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0f172a;
+    }
+    .bio-card-body { padding: 0.95rem 1rem 1.1rem; }
+    .bio-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+    .bio-card-cta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #DEB571;
+    }
+
+    .bio-skeleton {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .bio-skeleton-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(90deg, #1e293b 0%, #2a3a52 50%, #1e293b 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.6s infinite;
+    }
+    .bio-skeleton-body { padding: 0.95rem 1rem 1.1rem; }
+    .bio-skeleton-line {
+      height: 0.9rem;
+      background: linear-gradient(90deg, #1e293b 0%, #2a3a52 50%, #1e293b 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.6s infinite;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .bio-skeleton-line:last-child { width: 40%; margin-bottom: 0; }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .bio-empty {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .bio-empty a { color: #DEB571; font-weight: 600; }
+
+    .bio-links { display: flex; flex-direction: column; gap: 0.65rem; }
+    .bio-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1rem;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+    .bio-btn:hover {
+      border-color: #DEB571;
+      transform: translateY(-1px);
+    }
+    .bio-btn-primary {
+      background: #DEB571;
+      color: #0a0e17;
+      border-color: #DEB571;
+    }
+    .bio-btn-primary:hover {
+      background: #e6c489;
+      border-color: #e6c489;
+    }
+
+    @media (min-width: 520px) {
+      body { padding: 2.5rem 1.25rem 4rem; }
+      .bio-logo { width: 64px; height: 64px; }
+      .bio-brand { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="bio-container">
+    <header class="bio-header">
+      <img src="/spade-logo.png" alt="Poker Playbook" width="64" height="64" class="bio-logo" />
+      <div class="bio-brand">Poker Playbook</div>
+      <p class="bio-tagline">The mind behind the grind</p>
+    </header>
+
+    <section aria-labelledby="posts-title">
+      <h2 id="posts-title" class="bio-section-title">📸 Latest posts</h2>
+      <div id="bio-posts" class="bio-posts">
+        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
+        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
+        <div class="bio-skeleton"><div class="bio-skeleton-cover"></div><div class="bio-skeleton-body"><div class="bio-skeleton-line"></div><div class="bio-skeleton-line"></div></div></div>
+      </div>
+    </section>
+
+    <section class="bio-links">
+      <a class="bio-btn bio-btn-primary" href={APP_CTA}>🎯 Start free</a>
+      <a class="bio-btn" href={BLOG_FALLBACK}>📝 Full blog</a>
+      <a class="bio-btn" href="/bio/">🌐 Versão em português</a>
+    </section>
+  </main>
+
+  <script is:inline define:vars={{ SUPABASE_URL, SUPABASE_KEY, BLOG_BASE, BLOG_FALLBACK }}>
+    (function () {
+      const container = document.getElementById('bio-posts');
+      if (!container) return;
+
+      function renderEmpty() {
+        container.innerHTML = '';
+        const empty = document.createElement('div');
+        empty.className = 'bio-empty';
+        const link = document.createElement('a');
+        link.href = BLOG_FALLBACK;
+        link.textContent = 'See the latest articles on the blog →';
+        empty.appendChild(link);
+        container.appendChild(empty);
+      }
+
+      function buildCard(post) {
+        const slug = typeof post.article_slug === 'string' ? post.article_slug : '';
+        if (!slug) return null;
+        const title = (typeof post.article_title_en === 'string' && post.article_title_en.trim())
+          ? post.article_title_en.trim()
+          : (typeof post.article_title_pt === 'string' ? post.article_title_pt.trim() : '');
+        if (!title) return null;
+        const cover = typeof post.cover_url === 'string' ? post.cover_url : '';
+        const coverOk = /^https:\/\//.test(cover);
+        const keyword = typeof post.keyword === 'string' && post.keyword.trim() ? post.keyword.trim() : slug;
+
+        const card = document.createElement('a');
+        card.className = 'bio-card';
+        card.href = BLOG_BASE + encodeURIComponent(slug) + '/?utm_source=instagram&utm_medium=bio&utm_campaign=' + encodeURIComponent(keyword);
+        card.rel = 'noopener';
+
+        if (coverOk) {
+          const img = document.createElement('img');
+          img.className = 'bio-card-cover';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.alt = '';
+          img.src = cover;
+          card.appendChild(img);
+        }
+
+        const body = document.createElement('div');
+        body.className = 'bio-card-body';
+        const h3 = document.createElement('div');
+        h3.className = 'bio-card-title';
+        h3.textContent = title;
+        const cta = document.createElement('div');
+        cta.className = 'bio-card-cta';
+        cta.textContent = 'Read article →';
+        body.appendChild(h3);
+        body.appendChild(cta);
+        card.appendChild(body);
+        return card;
+      }
+
+      async function load() {
+        try {
+          const resp = await fetch(SUPABASE_URL, { headers: { apikey: SUPABASE_KEY } });
+          if (!resp.ok) { renderEmpty(); return; }
+          const data = await resp.json();
+          if (!Array.isArray(data) || data.length === 0) { renderEmpty(); return; }
+          const cards = data.map(buildCard).filter(Boolean);
+          if (cards.length === 0) { renderEmpty(); return; }
+          container.innerHTML = '';
+          cards.forEach(c => container.appendChild(c));
+        } catch (e) {
+          renderEmpty();
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', load);
+      } else {
+        load();
+      }
+    })();
+  </script>
+</body>
+</html>
