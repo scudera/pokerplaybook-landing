@@ -1,28 +1,28 @@
 /* ============================================
    Poker Playbook — Landing Page Styles
-   Dark theme · #10b981 accent · system-ui
+   Dark theme · #DEB571 gold accent · system-ui
    ============================================ */
 
 :root {
   /* Core palette */
-  --bg-primary: #0a0f0d;
-  --bg-secondary: #111916;
-  --bg-card: #151d19;
-  --bg-card-hover: #1a2420;
-  --border: #1e2e27;
-  --border-subtle: #162219;
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
+  --bg-card-hover: #293548;
+  --border: #334155;
+  --border-subtle: #1e293b;
 
   /* Text */
-  --text-primary: #f0fdf4;
-  --text-secondary: #a7c4b8;
-  --text-muted: #6b8f7e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
   /* Accent */
-  --accent: #10b981;
-  --accent-light: #34d399;
-  --accent-dark: #059669;
-  --accent-glow: rgba(16, 185, 129, 0.15);
-  --accent-glow-strong: rgba(16, 185, 129, 0.25);
+  --accent: #DEB571;
+  --accent-light: #EBC890;
+  --accent-dark: #C29849;
+  --accent-glow: rgba(222, 181, 113, 0.15);
+  --accent-glow-strong: rgba(222, 181, 113, 0.25);
 
   /* Pillar colors */
   --pillar-corpo: #1D9E75;
@@ -136,7 +136,7 @@ img {
   right: 0;
   z-index: 100;
   padding: 1rem 0;
-  background: rgba(10, 15, 13, 0.8);
+  background: rgba(10, 14, 23, 0.8);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
   transition: background 0.3s;
@@ -269,7 +269,7 @@ img {
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   background: var(--accent-glow);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(222, 181, 113, 0.2);
   border-radius: 100px;
   font-size: 0.8rem;
   font-weight: 500;
@@ -402,7 +402,7 @@ img {
 }
 
 .pillar-card:hover {
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(222, 181, 113, 0.3);
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
