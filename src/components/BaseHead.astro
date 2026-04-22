@@ -122,3 +122,83 @@ const orgJsonLd = {
   gtag('js', new Date());
   gtag('config', 'G-7ZRQS4R3GQ');
 </script>
+
+<!-- UTM Propagation: captures UTMs from URL, persists first-touch 30d, propagates to app.pokerplaybook.pro links. Last-touch UTMs override stored, but first_touch_at/url are preserved from the original visit. -->
+<script is:inline>
+  (function() {
+    const STORAGE_KEY = 'pp_utm';
+    const TTL_DAYS = 30;
+    const APP_HOST = 'app.pokerplaybook.pro';
+    const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+    const qs = new URLSearchParams(window.location.search);
+    const urlUtms = {};
+    UTM_KEYS.forEach(k => { const v = qs.get(k); if (v) urlUtms[k] = v; });
+    const hasUrlUtms = Object.keys(urlUtms).length > 0;
+
+    let stored = null;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const p = JSON.parse(raw);
+        const maxAge = TTL_DAYS * 24 * 60 * 60 * 1000;
+        if (Date.now() - (p.saved_at || 0) < maxAge) stored = p;
+        else localStorage.removeItem(STORAGE_KEY);
+      }
+    } catch (e) { /* private mode / storage disabled */ }
+
+    // Save first-touch only if nothing valid stored yet.
+    if (hasUrlUtms && !stored) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          utms: urlUtms,
+          first_touch_at: new Date().toISOString(),
+          first_touch_url: window.location.href,
+          saved_at: Date.now(),
+        }));
+      } catch (e) { /* ignore */ }
+    }
+
+    // Effective attribution: URL UTMs override stored UTMs (last-touch),
+    // but first_touch_at/url are always preserved from the earliest visit.
+    let effective = null;
+    if (hasUrlUtms && stored) {
+      effective = {
+        utms: Object.assign({}, stored.utms, urlUtms),
+        first_touch_at: stored.first_touch_at,
+        first_touch_url: stored.first_touch_url,
+      };
+    } else if (hasUrlUtms) {
+      effective = {
+        utms: urlUtms,
+        first_touch_at: new Date().toISOString(),
+        first_touch_url: window.location.href,
+      };
+    } else if (stored) {
+      effective = {
+        utms: stored.utms,
+        first_touch_at: stored.first_touch_at,
+        first_touch_url: stored.first_touch_url,
+      };
+    }
+    if (!effective) return;
+
+    function rewrite() {
+      document.querySelectorAll('a[href*="' + APP_HOST + '"]').forEach(a => {
+        try {
+          const u = new URL(a.href);
+          if (u.hostname !== APP_HOST) return;
+          // Skip if link already has any UTM param (e.g. bio pages).
+          if (UTM_KEYS.some(k => u.searchParams.has(k))) return;
+          Object.entries(effective.utms).forEach(([k, v]) => u.searchParams.set(k, v));
+          if (effective.first_touch_at) u.searchParams.set('first_touch_at', effective.first_touch_at);
+          if (effective.first_touch_url) u.searchParams.set('first_touch_url', effective.first_touch_url);
+          a.href = u.toString();
+        } catch (e) { /* ignore bad URLs */ }
+      });
+    }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', rewrite);
+    else rewrite();
+  })();
+</script>
