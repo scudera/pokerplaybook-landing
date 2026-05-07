@@ -121,7 +121,11 @@ const orgJsonLd = {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-7ZRQS4R3GQ');
+  gtag('config', 'G-7ZRQS4R3GQ', {
+    linker: {
+      domains: ['pokerplaybook.pro', 'blog.pokerplaybook.pro', 'app.pokerplaybook.pro']
+    }
+  });
 </script>
 
 <!-- UTM Propagation: captures UTMs from URL, persists first-touch 30d, propagates to app.pokerplaybook.pro links. Last-touch UTMs override stored, but first_touch_at/url are preserved from the original visit. -->
