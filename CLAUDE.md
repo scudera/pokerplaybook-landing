@@ -1,3 +1,5 @@
+# Poker Playbook — Landing
+
 ## Princípios gerais (anexo)
 
 - **Mudanças cirúrgicas:** toque apenas no que foi pedido. Não "melhore" código adjacente, comentários ou formatação. Combine o estilo existente, mesmo que você faria diferente.
