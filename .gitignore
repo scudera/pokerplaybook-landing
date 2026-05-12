@@ -3,5 +3,8 @@ dist/
 .astro/
 .env
 .env.production
+.env.local
+.env.*.local
+.vercel/
 .DS_Store
 *.log
