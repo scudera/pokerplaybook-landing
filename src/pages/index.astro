@@ -1,8 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SeoLeadCallout from '../components/SeoLeadCallout.astro';
 
 const title = 'Poker Playbook — Performance Mental para Jogadores de MTT';
 const description = 'A primeira plataforma de performance mental com IA para poker. Controle tilt, construa rotina e tome decisões melhores. Grátis pra começar.';
+
+const heroH1Plain = 'Você sabe jogar. Mas sabe por que tiltou ontem?';
+const heroSubPlain = 'Solver não resolve tilt. Tracker não mede sono. Coach não tá lá todo dia. Falta uma peça — e ela não é técnica.';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -159,6 +163,10 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <SeoLeadCallout title={heroH1Plain} description={heroSubPlain} lang="pt" />
+  </div>
 
   <!-- ========== A DOR ========== -->
   <section class="section" id="dor" style="background: var(--bg-secondary);">

@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: 'pt' | 'en';
+}
+
+const { title, description, lang } = Astro.props;
+const label = lang === 'pt' ? 'Em resumo' : 'Summary';
+---
+
+<aside class="seo-lead-callout">
+  <p class="seo-lead-callout__label"><span aria-hidden="true">📌</span> <strong>{label}:</strong></p>
+  <p class="seo-lead-callout__body">{title}. {description}</p>
+</aside>
+
+<style>
+  .seo-lead-callout {
+    max-width: 680px;
+    margin: 0 auto 2em;
+    padding: 1.25em 1.5em;
+    background: rgba(16, 185, 129, 0.05);
+    border-left: 3px solid #10b981;
+    border-radius: 0 12px 12px 0;
+  }
+  .seo-lead-callout__label {
+    margin: 0 0 0.4em;
+    color: #10b981;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .seo-lead-callout__body {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  @media (max-width: 600px) {
+    .seo-lead-callout { padding: 1em 1.2em; }
+  }
+</style>

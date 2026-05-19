@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SeoLeadCallout from './SeoLeadCallout.astro';
 
 interface Props {
   pillar: string;
@@ -69,6 +70,10 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <SeoLeadCallout title={title} description={description} lang={isEn ? 'en' : 'pt'} />
+  </div>
 
   <!-- Componentes -->
   <section class="section">

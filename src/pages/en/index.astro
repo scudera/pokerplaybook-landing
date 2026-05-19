@@ -1,8 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import SeoLeadCallout from '../../components/SeoLeadCallout.astro';
 
 const title = 'Poker Playbook — Mental Performance for MTT Players';
 const description = 'The first AI-powered mental performance platform for poker. Control tilt, build routine and make better decisions. Free to start.';
+
+const heroH1Plain = 'You know how to play. But do you know why you tilted yesterday?';
+const heroSubPlain = "Solvers don't fix tilt. Trackers don't measure sleep. Coaches aren't there every day. There's a missing piece — and it's not technical.";
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -158,6 +162,10 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <SeoLeadCallout title={heroH1Plain} description={heroSubPlain} lang="en" />
+  </div>
 
   <!-- ========== THE PAIN ========== -->
   <section class="section" id="pain" style="background: var(--bg-secondary);">
