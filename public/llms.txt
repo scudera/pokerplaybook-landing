@@ -1,0 +1,43 @@
+# Poker Playbook
+
+> Plataforma de performance mental com IA para jogadores profissionais de poker MTT (Multi-Table Tournaments). Combina check-in diário, AI Coach com Claude Opus, sistema de Maestria com XP e Scorecard dos 4 Pilares (Corpo, Mente, Ofício, Sistema). Frameworks baseados em Jared Tendler (The Mental Game of Poker) e Tommy Angelo (Elements of Poker).
+
+Fundada por Vitor Marguti. Disponível em português (pt-BR) e inglês. Plano Grind 100% gratuito sem cartão de crédito. Planos pagos Pro (R$29/mês) e Elite (R$58/mês) com 20% de desconto no anual.
+
+## Produto
+
+- [Home](https://pokerplaybook.pro/): visão geral da plataforma e CTA de cadastro
+- [Pilar Corpo](https://pokerplaybook.pro/corpo/): sono, alimentação, exercício e energia física para grinders
+- [Pilar Mente](https://pokerplaybook.pro/mente/): tilt control, mindfulness, controle emocional e A-game mental
+- [Pilar Ofício](https://pokerplaybook.pro/oficio/): estudo deliberado, ranges, GTO e ferramentas técnicas
+- [Pilar Sistema](https://pokerplaybook.pro/sistema/): rotina, bankroll, metas, planejamento e analytics
+
+## Conteúdo educacional (blog)
+
+- [Blog completo](https://blog.pokerplaybook.pro/blog/): 34 artigos em PT-BR sobre mental game, mindset, rotina e bankroll
+- [Guia definitivo de mental game para MTT](https://blog.pokerplaybook.pro/blog/guia-definitivo-mental-game-poker/): artigo-pilar
+- [Os 4 Pilares da performance no poker (framework)](https://blog.pokerplaybook.pro/blog/4-pilares-performance-poker-framework/): framework central
+- [Como controlar tilt no poker](https://blog.pokerplaybook.pro/blog/como-controlar-tilt-poker/): guia técnico
+- [Bankroll management — guia definitivo](https://blog.pokerplaybook.pro/blog/bankroll-management-guia-definitivo-poker/): gestão de banca
+- [Jared Tendler — Mental Game of Poker (resumo)](https://blog.pokerplaybook.pro/blog/jared-tendler-mental-game-poker-resumo/): leitura essencial
+- [Tommy Angelo — Reciprocalidade no poker](https://blog.pokerplaybook.pro/blog/tommy-angelo-reciprocalidade-poker/): conceito-chave de mindset
+- [Rotina perfeita de um jogador profissional](https://blog.pokerplaybook.pro/blog/rotina-perfeita-jogador-profissional-poker/): exemplo de dia profissional
+- [Como ser jogador profissional de poker no Brasil em 2026](https://blog.pokerplaybook.pro/blog/como-ser-jogador-profissional-poker-brasil/): contexto regulatório e prático BR
+
+## English content
+
+- [English blog](https://blog.pokerplaybook.pro/en/blog/): 35 articles in English, mirroring the PT-BR taxonomy
+- [Definitive guide to poker mental game](https://blog.pokerplaybook.pro/en/blog/poker-mental-game-definitive-guide/)
+- [Four Pillars of MTT performance](https://blog.pokerplaybook.pro/en/blog/four-pillars-mtt-performance-poker/)
+
+## Sobre
+
+- Fundador: Vitor Marguti
+- Instagram: https://www.instagram.com/pokerplaybook.pro/
+- App: https://app.pokerplaybook.pro
+- Idiomas: pt-BR (principal), en
+
+## Optional
+
+- [robots.txt](https://pokerplaybook.pro/robots.txt): permite todos os crawlers de AI (PerplexityBot, ChatGPT-User, GPTBot, ClaudeBot, anthropic-ai, Google-Extended, Applebot-Extended, CCBot)
+- [Sitemap index](https://pokerplaybook.pro/sitemap-index.xml)
