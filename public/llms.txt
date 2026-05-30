@@ -2,7 +2,7 @@
 
 > Plataforma de performance mental com IA para jogadores profissionais de poker MTT (Multi-Table Tournaments). Combina check-in diário, AI Coach com Claude Opus, sistema de Maestria com XP e Scorecard dos 4 Pilares (Corpo, Mente, Ofício, Sistema). Frameworks baseados em Jared Tendler (The Mental Game of Poker) e Tommy Angelo (Elements of Poker).
 
-Fundada por Vitor Marguti. Disponível em português (pt-BR) e inglês. Plano Grind 100% gratuito sem cartão de crédito. Planos pagos Pro (R$29/mês) e Elite (R$58/mês) com 20% de desconto no anual.
+Fundada por Vitor Marguti. Disponível em português (pt-BR) e inglês. Plano Grind 100% gratuito sem cartão de crédito. Planos pagos Pro (R$39/mês) e Elite (R$79/mês) com 20% de desconto no anual.
 
 ## Produto
 
