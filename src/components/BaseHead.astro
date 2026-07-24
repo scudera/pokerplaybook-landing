@@ -9,7 +9,7 @@ interface Props {
 const {
   title,
   description,
-  image = '/og-default.png',
+  image,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
@@ -17,6 +17,7 @@ const siteName = 'Poker Playbook';
 
 const canonicalPath = Astro.url.pathname;
 const isEn = canonicalPath.startsWith('/en');
+const ogImage = image ?? (isEn ? '/og-default-en.png' : '/og-default.png');
 const ptPath = isEn ? canonicalPath.replace('/en/', '/').replace('/en', '/').replace('/body', '/corpo').replace('/mind', '/mente').replace('/craft', '/oficio').replace('/system', '/sistema') : canonicalPath;
 const enPath = isEn ? canonicalPath : canonicalPath === '/' ? '/en/' : `/en${canonicalPath.replace('/corpo', '/body').replace('/mente', '/mind').replace('/oficio', '/craft').replace('/sistema', '/system')}`;
 const ptURL = new URL(ptPath, Astro.site).href;
@@ -101,7 +102,7 @@ const orgJsonLd = {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:image" content={new URL(image, Astro.site).href} />
+<meta property="og:image" content={new URL(ogImage, Astro.site).href} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
@@ -109,7 +110,7 @@ const orgJsonLd = {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL(image, Astro.site).href} />
+<meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
 
 <!-- JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
