@@ -1,4 +1,5 @@
 ---
+import GoogleAnalytics from './GoogleAnalytics.astro';
 interface Props {
   title: string;
   description: string;
@@ -117,17 +118,7 @@ const orgJsonLd = {
 <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
 
 <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRQS4R3GQ"></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7ZRQS4R3GQ', {
-    linker: {
-      domains: ['pokerplaybook.pro', 'blog.pokerplaybook.pro', 'app.pokerplaybook.pro']
-    }
-  });
-</script>
+<GoogleAnalytics />
 
 <!-- UTM Propagation: captures UTMs from URL, persists first-touch 30d, propagates to app.pokerplaybook.pro links. Last-touch UTMs override stored, but first_touch_at/url are preserved from the original visit. -->
 <script is:inline>
