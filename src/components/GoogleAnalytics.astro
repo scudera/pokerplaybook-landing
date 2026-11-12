@@ -1,0 +1,21 @@
+---
+// Tag do GA4 a partir de src/analytics.config.ts (#347).
+// linker=false omite o cross-domain linker (páginas que nunca tiveram).
+import { GA_ID, GA_LINKER_DOMAINS } from '../analytics.config';
+
+interface Props {
+  linker?: boolean;
+}
+
+const { linker = true } = Astro.props;
+const configArgs = linker
+  ? `${JSON.stringify(GA_ID)}, ${JSON.stringify({ linker: { domains: GA_LINKER_DOMAINS } })}`
+  : JSON.stringify(GA_ID);
+const inline = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', ${configArgs});`;
+---
+
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+<script is:inline set:html={inline} />

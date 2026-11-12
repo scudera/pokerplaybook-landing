@@ -1,4 +1,5 @@
 ---
+import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 // Standalone /en/bio — EN version. Consume RSS from the blog.
 const RSS_URL = 'https://blog.pokerplaybook.pro/en/rss.xml';
 const BLOG_FALLBACK = 'https://blog.pokerplaybook.pro/en/blog/';
@@ -23,13 +24,7 @@ const APP_CTA = 'https://app.pokerplaybook.pro?utm_source=instagram&utm_medium=b
   <meta property="og:url" content="https://pokerplaybook.pro/en/bio/" />
   <meta property="og:locale" content="en_US" />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRQS4R3GQ"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7ZRQS4R3GQ');
-  </script>
+  <GoogleAnalytics linker={false} />
 
   <style is:global>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
